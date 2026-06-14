@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import logoImg from "@/imports/logo.png";
+import logoImg from "@/app/logo.svg";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);

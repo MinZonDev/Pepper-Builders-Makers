@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import logoImg from "@/imports/logo.png";
+import logoImg from "@/app/logo.svg";
 
 export function Footer() {
   const { language } = useLanguage();
