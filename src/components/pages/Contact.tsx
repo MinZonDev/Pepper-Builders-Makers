@@ -100,13 +100,17 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="w-full h-64 bg-neutral-100">
-              {/* Mocking Google Maps */}
-              <div className="w-full h-full flex flex-col items-center justify-center text-neutral-400 border border-neutral-200">
-                 <MapPin size={32} className="mb-2" />
-                 <span>Google Maps Iframe</span>
-                 <span className="text-sm">{t.hqVal}</span>
-              </div>
+            <div className="w-full h-64">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7838.50920156732!2d106.70213547480522!3d10.791801889357934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f2b563e9d89%3A0x6ba743f57bd0b957!2sPepper%20House!5e0!3m2!1sen!2s!4v1781447618535!5m2!1sen!2s"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Pepper House Location"
+              />
             </div>
           </div>
 
