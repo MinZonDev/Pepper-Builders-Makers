@@ -32,7 +32,7 @@ export function Blog() {
         {blogPosts.length > 0 && (
           <div className="mb-16">
             <Link href={`/blog/${blogPosts[0].id}`} className="group grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-neutral-50 hover:bg-neutral-100 transition-colors">
-              <div className="h-[40vh] lg:h-[60vh] w-full overflow-hidden">
+              <div className="h-[35vh] lg:h-[50vh] w-full overflow-hidden">
                 <ImageWithFallback
                   src={blogPosts[0].img}
                   alt={language === 'VI' ? blogPosts[0].title.vi : blogPosts[0].title.en}

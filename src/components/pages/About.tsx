@@ -97,7 +97,7 @@ export function About() {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] as const }}
-        className="w-full h-[60vh] md:h-[80vh]"
+        className="w-full h-[45vh] md:h-[60vh]"
       >
         <ImageWithFallback
           src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBsaXZpbmclMjByb29tfGVufDF8fHx8MTc4MTE4Njg1OXww&ixlib=rb-4.1.0&q=80&w=1080"

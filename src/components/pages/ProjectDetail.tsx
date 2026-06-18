@@ -80,7 +80,7 @@ export function ProjectDetail({ id }: { id: string }) {
           <ImageWithFallback
             src={project.img}
             alt={`${project.name} Featured`}
-            className="w-full h-[50vh] md:h-[75vh] object-cover"
+            className="w-full h-[40vh] md:h-[60vh] object-cover"
           />
         </div>
 
@@ -185,7 +185,7 @@ export function ProjectDetail({ id }: { id: string }) {
               <ImageWithFallback
                 src={imgUrl}
                 alt={`${project.name} gallery ${i + 1}`}
-                className="w-full h-full min-h-[400px] object-cover max-h-[90vh]"
+                className="w-full h-full min-h-[300px] object-cover max-h-[70vh]"
               />
             </div>
           ))}

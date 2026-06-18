@@ -80,7 +80,7 @@ export function BlogDetail({ id }: { id: string }) {
           <ImageWithFallback
             src={post.img}
             alt={language === 'VI' ? post.title.vi : post.title.en}
-            className="w-full h-[50vh] md:h-[70vh] object-cover"
+            className="w-full h-[40vh] md:h-[55vh] object-cover"
           />
         </div>
 

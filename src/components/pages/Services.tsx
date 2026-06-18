@@ -190,7 +190,7 @@ export function Services() {
                   <ImageWithFallback
                     src={svc.img}
                     alt={svc.title}
-                    className="w-full aspect-[3/4] lg:aspect-[4/5] object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out"
+                    className="w-full aspect-[4/3] object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out"
                   />
                 </div>
               </motion.div>
