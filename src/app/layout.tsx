@@ -1,10 +1,25 @@
 import type { Metadata } from 'next';
+import { Inter, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { ScrollToTop } from '@/components/ScrollToTop';
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import { WebsiteJsonLd, OrganizationJsonLd } from '@/lib/structured-data';
+
+const inter = Inter({
+  subsets: ['latin', 'vietnamese'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin', 'vietnamese'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-ibm-plex-mono',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://pepper.builders'),
@@ -49,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="vi">
+    <html lang="vi" className={`${inter.variable} ${ibmPlexMono.variable}`}>
       <body className="font-sans antialiased">
         <LanguageProvider>
           <div className="flex min-h-screen flex-col bg-white text-neutral-900 font-sans">

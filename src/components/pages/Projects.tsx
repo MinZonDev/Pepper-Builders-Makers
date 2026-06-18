@@ -8,10 +8,10 @@ import { allProjects } from "@/data/projects";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const categories = [
-  { id: "all", label: { vi: "ALL", en: "ALL" } },
-  { id: "Hospitality", label: { vi: "HOSPITALITY", en: "HOSPITALITY" } },
-  { id: "Residential", label: { vi: "RESIDENTIAL", en: "RESIDENTIAL" } },
-  { id: "Commercial", label: { vi: "COMMERCIAL", en: "COMMERCIAL" } }
+  { id: "all", label: { vi: "All", en: "All" } },
+  { id: "Hospitality", label: { vi: "Rental & Hospitality Properties", en: "Rental & Hospitality Properties" } },
+  { id: "Residential", label: { vi: "Personalized Homes", en: "Personalized Homes" } },
+  { id: "Commercial", label: { vi: "Commercial Spaces", en: "Commercial Spaces" } }
 ];
 
 export function Projects() {
@@ -40,7 +40,7 @@ export function Projects() {
               key={cat.id}
               onClick={() => setActiveFilter(cat.id)}
               className={`pb-4 text-sm font-medium tracking-wide transition-colors relative ${
-                activeFilter === cat.id ? "text-black" : "text-neutral-400 hover:text-black"
+                activeFilter === cat.id ? "text-black" : "text-neutral-600 hover:text-black"
               }`}
             >
               {language === 'VI' ? cat.label.vi : cat.label.en}
@@ -86,7 +86,7 @@ export function Projects() {
                         {language === 'VI' ? project.location.vi : project.location.en}
                       </p>
                     </div>
-                    <span className="text-sm tracking-widest uppercase text-neutral-400">
+                    <span className="text-sm tracking-widest uppercase text-neutral-600">
                       {project.category}
                     </span>
                   </div>

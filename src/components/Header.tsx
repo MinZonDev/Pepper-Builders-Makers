@@ -11,6 +11,7 @@ import logoImg from "@/app/logo.svg";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isPastHero, setIsPastHero] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
   const router = useRouter();
@@ -22,8 +23,9 @@ export function Header() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
+      setIsPastHero(window.scrollY > window.innerHeight * 0.8);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -102,13 +104,20 @@ export function Header() {
               </button>
             </div>
             
-            {/* CTA Button */}
-            <button 
+            {/* CTA Button — hidden on homepage until scrolled past hero */}
+            <motion.button
               onClick={() => router.push('/contact')}
+              initial={false}
+              animate={{
+                opacity: isHomePage && !isPastHero ? 0 : 1,
+                x: isHomePage && !isPastHero ? 20 : 0,
+                pointerEvents: isHomePage && !isPastHero ? 'none' as const : 'auto' as const,
+              }}
+              transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
               className={`${isTransparent ? "bg-white text-black hover:bg-neutral-200" : "bg-black text-white hover:bg-neutral-800"} text-xs font-bold uppercase tracking-widest px-6 py-3 transition-colors flex items-center gap-2 rounded-none`}
             >
               {ctaText} <ArrowRight size={14} />
-            </button>
+            </motion.button>
           </div>
         </div>
 

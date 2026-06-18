@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { allProjects } from '@/data/projects';
 import { ProjectDetail } from '@/components/pages/ProjectDetail';
 
@@ -37,5 +38,7 @@ export default async function ProjectDetailPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  const project = allProjects.find((p) => p.id === id);
+  if (!project) notFound();
   return <ProjectDetail id={id} />;
 }

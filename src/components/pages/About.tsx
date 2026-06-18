@@ -10,10 +10,8 @@ export function About() {
   const { language } = useLanguage();
 
   const t = {
-    heroTitle1: language === 'VI' ? "Kiến tạo" : "Crafting",
-    heroTitle2: language === 'VI' ? "không gian." : "spaces.",
-    heroTitle3: language === 'VI' ? "Định hình" : "Shaping",
-    heroTitle4: language === 'VI' ? "phong cách." : "lifestyles.",
+    heroTitle1: language === 'VI' ? "Kiến tạo không gian." : "Create Spaces.",
+    heroTitle2: language === 'VI' ? "Gia tăng giá trị." : "Create Value.",
     introQuote: language === 'VI' 
       ? "Sự hoàn mỹ không đến từ những điều lớn lao, mà từ sự tận tâm trong từng chi tiết nhỏ nhất." 
       : "Perfection does not come from grand things, but from dedication to the smallest details.",
@@ -54,12 +52,12 @@ export function About() {
     ],
     processTitle: language === 'VI' ? "Quy trình làm việc" : "How we work",
     process: [
-      { num: "01", title: language === 'VI' ? "Tiếp nhận & Đánh giá" : "Receive & Evaluate", desc: language === 'VI' ? "Ghi nhận thông tin dự án, mục tiêu và kỳ vọng. Phân tích tính khả thi, quy mô và ngân sách dự kiến." : "Record project information, goals, and expectations. Analyze feasibility, scale, and estimated budget." },
-      { num: "02", title: language === 'VI' ? "Tư vấn & Thống nhất phương án" : "Consulting & Concept Agreement", desc: language === 'VI' ? "Thảo luận trực tiếp, làm rõ yêu cầu và thống nhất hướng tiếp cận." : "Direct discussion, clarify requirements and agree on the approach." },
-      { num: "03", title: language === 'VI' ? "Báo giá & Hợp đồng" : "Quotation & Contract", desc: language === 'VI' ? "Trình bày đề xuất chi tiết, ký kết hợp đồng minh bạch." : "Present detailed proposal, transparent contract signing." },
-      { num: "04", title: language === 'VI' ? "Thiết kế & Phối cảnh 3D" : "Design & 3D Rendering", desc: language === 'VI' ? "Phát triển hồ sơ kiến trúc, bản vẽ kỹ thuật và phối cảnh 3D theo yêu cầu." : "Develop architectural documents, technical drawings and 3D renderings as required." },
-      { num: "05", title: language === 'VI' ? "Thi công & Giám sát" : "Construction & Supervision", desc: language === 'VI' ? "Triển khai công trình với kiểm soát chặt chẽ Chất lượng – Chi phí – Tiến độ." : "Implement construction with strict control of Quality - Cost - Schedule." },
-      { num: "06", title: language === 'VI' ? "Hoàn thành & Bàn giao" : "Completion & Handover", desc: language === 'VI' ? "Nghiệm thu, tất toán toàn bộ chi phí, bàn giao tài liệu và bảo hành dự án." : "Acceptance, settle all costs, handover documents and project warranty." },
+      { num: "01", title: language === 'VI' ? "Tiếp nhận & đánh giá dự án" : "Project Intake & Assessment", desc: language === 'VI' ? "Ghi nhận thông tin dự án, mục tiêu và kỳ vọng. Phân tích tính khả thi, quy mô và ngân sách dự kiến." : "Record project information, goals, and expectations. Analyze feasibility, scale, and estimated budget." },
+      { num: "02", title: language === 'VI' ? "Tư vấn và thống nhất phương án" : "Consulting & Concept Agreement", desc: language === 'VI' ? "Thảo luận trực tiếp, làm rõ yêu cầu và thống nhất hướng tiếp cận thiết kế phù hợp nhất." : "Direct discussion, clarify requirements and agree on the most suitable design approach." },
+      { num: "03", title: language === 'VI' ? "Khái toán ngân sách và hợp đồng" : "Budget Estimate & Contract", desc: language === 'VI' ? "Khái toán chi phí chi tiết, minh bạch theo từng hạng mục. Ký kết hợp đồng rõ ràng, không phát sinh." : "Detailed, transparent cost estimate by line item. Clear contract signing with no hidden costs." },
+      { num: "04", title: language === 'VI' ? "Thiết kế & lên kế hoạch thi công" : "Design & Construction Planning", desc: language === 'VI' ? "Phát triển hồ sơ kiến trúc, bản vẽ kỹ thuật, phối cảnh 3D và lên tiến độ thi công chi tiết." : "Develop architectural documents, technical drawings, 3D renderings, and detailed construction schedule." },
+      { num: "05", title: language === 'VI' ? "Thi công & quản lý chất lượng" : "Construction & Quality Management", desc: language === 'VI' ? "Triển khai công trình với kiểm soát chặt chẽ Chất lượng – Chi phí – Tiến độ tại công trường." : "Execute construction with strict on-site control of Quality, Cost, and Schedule." },
+      { num: "06", title: language === 'VI' ? "Hoàn thành & bàn giao" : "Completion & Handover", desc: language === 'VI' ? "Nghiệm thu, tất toán toàn bộ chi phí, bàn giao hồ sơ hoàn công và bảo hành dự án." : "Acceptance, settle all costs, handover as-built documents and project warranty." },
     ],
     ctaTitle: language === 'VI' ? "Cùng kiến tạo không gian tiếp theo của bạn." : "Let's build your next space together.",
     ctaBtn: language === 'VI' ? "Khởi tạo dự án" : "Start your project",
@@ -75,19 +73,17 @@ export function About() {
       
       {/* Hero Section */}
       <section className="container mx-auto px-6 md:px-12 mb-12">
-        <motion.h1 
+        <motion.h1
           initial="hidden"
           animate="visible"
           variants={{
             hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+            visible: { opacity: 1, transition: { staggerChildren: 0.12 } }
           }}
-          className="text-5xl md:text-7xl lg:text-[7rem] font-bold tracking-tighter uppercase leading-[0.9]"
+          className="text-4xl md:text-6xl font-mono tracking-tight leading-tight"
         >
-          <motion.div variants={fadeInUp} className="block text-neutral-400">{t.heroTitle1}</motion.div>
-          <motion.div variants={fadeInUp} className="block text-black ml-0 md:ml-24">{t.heroTitle2}</motion.div>
-          <motion.div variants={fadeInUp} className="block text-neutral-400 mt-4 md:mt-8">{t.heroTitle3}</motion.div>
-          <motion.div variants={fadeInUp} className="block text-black ml-0 md:ml-48">{t.heroTitle4}</motion.div>
+          <motion.div variants={fadeInUp} className="block">{t.heroTitle1}</motion.div>
+          <motion.div variants={fadeInUp} className="block text-neutral-500">{t.heroTitle2}</motion.div>
         </motion.h1>
       </section>
 
@@ -213,6 +209,37 @@ export function About() {
 
           </div>
         </div>
+      </section>
+
+      {/* Certifications & Partners */}
+      <section className="py-24 md:py-32 container mx-auto px-6 md:px-12">
+        <motion.div
+          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+        >
+          <p className="text-xs font-bold tracking-widest uppercase text-neutral-500 mb-12">
+            {language === 'VI' ? 'Chứng nhận & Đối tác' : 'Certifications & Partners'}
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 border-t border-neutral-200 pt-12">
+            {[
+              { name: 'Design by O9', abbr: 'O9' },
+              { name: 'VICOSTONE', abbr: 'VCS' },
+              { name: 'HAFELE', abbr: 'HFL' },
+              { name: 'HÄFELE PARTNER', abbr: 'HP' },
+            ].map((partner, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                className="flex flex-col items-center justify-center py-8 border border-neutral-200 grayscale hover:grayscale-0 hover:border-neutral-400 transition-all"
+              >
+                <span className="text-2xl font-mono font-bold text-neutral-400 tracking-widest">{partner.abbr}</span>
+                <span className="text-[10px] tracking-widest uppercase text-neutral-400 mt-2">{partner.name}</span>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </section>
 
       {/* Big CTA */}

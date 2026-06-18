@@ -11,6 +11,7 @@ export type Project = {
   client: string;
   scale: string;
   services: { vi: string; en: string };
+  partner?: string;
 };
 
 const u = (id: string) => `https://images.unsplash.com/photo-${id}?w=1080&q=80&fit=crop&auto=format`;
@@ -32,6 +33,7 @@ export const allProjects: Project[] = [
     client: 'Bare Group',
     scale: '950 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'the-global-city-2',
@@ -49,6 +51,7 @@ export const allProjects: Project[] = [
     client: 'Tư gia',
     scale: '180 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'the-global-city-1',
@@ -66,6 +69,7 @@ export const allProjects: Project[] = [
     client: 'Tư gia',
     scale: '155 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'the-parkland-penthouse',
@@ -83,6 +87,7 @@ export const allProjects: Project[] = [
     client: 'Tư gia',
     scale: '320 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'bare-dakao',
@@ -117,6 +122,7 @@ export const allProjects: Project[] = [
     client: 'Tư gia',
     scale: '210 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'dalcheeni-indian-restaurant',
@@ -134,6 +140,7 @@ export const allProjects: Project[] = [
     client: 'Dalcheeni F&B',
     scale: '280 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'tiny-house',
@@ -168,6 +175,7 @@ export const allProjects: Project[] = [
     client: 'Tư gia',
     scale: '165 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'bare-hyphen',
@@ -185,6 +193,7 @@ export const allProjects: Project[] = [
     client: 'Bare Group',
     scale: '640 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'the-cave',
@@ -202,6 +211,7 @@ export const allProjects: Project[] = [
     client: 'Tư nhân',
     scale: '380 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'bare-han',
@@ -219,6 +229,7 @@ export const allProjects: Project[] = [
     client: 'Bare Group',
     scale: '850 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'bare-chic',
@@ -253,6 +264,7 @@ export const allProjects: Project[] = [
     client: 'Kashew F&B',
     scale: '350 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'the-nang-suites',
@@ -270,6 +282,7 @@ export const allProjects: Project[] = [
     client: 'Nắng Hospitality',
     scale: '2.100 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'chi-bu-riverside-resort',
@@ -321,6 +334,7 @@ export const allProjects: Project[] = [
     client: 'Tư gia',
     scale: '120 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'bare-gallery',
@@ -372,6 +386,7 @@ export const allProjects: Project[] = [
     client: 'Tư gia',
     scale: '380 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'the-park-apartment',
@@ -389,6 +404,7 @@ export const allProjects: Project[] = [
     client: 'Tư gia',
     scale: '130 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'vista-verde-apartment-2',
@@ -406,6 +422,7 @@ export const allProjects: Project[] = [
     client: 'Tư gia',
     scale: '95 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'vista-verde-apartment-1',
@@ -423,6 +440,7 @@ export const allProjects: Project[] = [
     client: 'Tư gia',
     scale: '78 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'wrap-and-roll',
@@ -440,6 +458,7 @@ export const allProjects: Project[] = [
     client: 'Wrap&Roll F&B',
     scale: '220 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'acqua-villa',
@@ -474,6 +493,7 @@ export const allProjects: Project[] = [
     client: 'Tư gia',
     scale: '110 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'pepper-house',
@@ -508,6 +528,7 @@ export const allProjects: Project[] = [
     client: 'Tandoor F&B',
     scale: '350 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'rivera-cove-villa',
@@ -542,6 +563,7 @@ export const allProjects: Project[] = [
     client: 'Banian Tree F&B',
     scale: '400 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'chiisana-hashi-restaurant',
@@ -559,6 +581,7 @@ export const allProjects: Project[] = [
     client: 'Chiisana Hashi F&B',
     scale: '320 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
   {
     id: 'elgaucho-steak-house',
@@ -576,5 +599,6 @@ export const allProjects: Project[] = [
     client: 'Elgaucho F&B',
     scale: '280 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
+    partner: 'Design by O9',
   },
 ];

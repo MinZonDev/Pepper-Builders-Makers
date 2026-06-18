@@ -11,8 +11,8 @@ export function Services() {
   const { language } = useLanguage();
 
   const t = {
-    headerTitle: language === 'VI' ? "Dịch vụ thiết kế & thi công toàn diện" : "Comprehensive Design & Build",
-    headerDesc: language === 'VI' ? "Nhà ở, BĐS cho thuê, nhà hàng, khách sạn, văn phòng. Từ thiết kế đến thi công, quản lý và vận hành dưới một đội ngũ duy nhất." : "Residential, rental properties, restaurants, hotels, offices. From design to construction, management and operation under a single team.",
+    headerTitle: language === 'VI' ? "Dịch vụ của chúng tôi" : "Our Services",
+    headerDesc: language === 'VI' ? "Pepper Builders & Makers cung cấp giải pháp thiết kế và thi công cho các không gian lưu trú, cho thuê, thương mại và nhà ở cá nhân hóa — với trọng tâm là tạo ra những công trình có concept, công năng và trải nghiệm sử dụng rõ ràng." : "Pepper Builders & Makers provides design and construction solutions for hospitality, rental, commercial, and personalized residential spaces — with a focus on creating projects with clear concepts, functionality, and user experience.",
     viewProjects: language === 'VI' ? "Xem dự án" : "Explore projects",
     faqTitle: language === 'VI' ? "Câu hỏi thường gặp" : "Frequently Asked Questions",
     faqP: language === 'VI' ? "Bạn có câu hỏi khác? Đừng ngần ngại liên hệ với chúng tôi." : "Have other questions? Don't hesitate to contact us.",
@@ -21,45 +21,45 @@ export function Services() {
   };
 
   const process = [
-    { num: "01", title: language === 'VI' ? "Tiếp nhận & Đánh giá" : "Receive & Evaluate", desc: language === 'VI' ? "Ghi nhận thông tin dự án, mục tiêu và kỳ vọng. Phân tích tính khả thi, quy mô và ngân sách dự kiến." : "Record project information, goals, and expectations. Analyze feasibility, scale, and estimated budget." },
-    { num: "02", title: language === 'VI' ? "Tư vấn & Thống nhất phương án" : "Consulting & Concept Agreement", desc: language === 'VI' ? "Thảo luận trực tiếp, làm rõ yêu cầu và thống nhất hướng tiếp cận." : "Direct discussion, clarify requirements and agree on the approach." },
-    { num: "03", title: language === 'VI' ? "Báo giá & Hợp đồng" : "Quotation & Contract", desc: language === 'VI' ? "Trình bày đề xuất chi tiết, ký kết hợp đồng minh bạch." : "Present detailed proposal, transparent contract signing." },
-    { num: "04", title: language === 'VI' ? "Thiết kế & Phối cảnh 3D" : "Design & 3D Rendering", desc: language === 'VI' ? "Phát triển hồ sơ kiến trúc, bản vẽ kỹ thuật và phối cảnh 3D theo yêu cầu." : "Develop architectural documents, technical drawings and 3D renderings as required." },
-    { num: "05", title: language === 'VI' ? "Thi công & Giám sát" : "Construction & Supervision", desc: language === 'VI' ? "Triển khai công trình với kiểm soát chặt chẽ Chất lượng – Chi phí – Tiến độ." : "Implement construction with strict control of Quality - Cost - Schedule." },
-    { num: "06", title: language === 'VI' ? "Hoàn thành & Bàn giao" : "Completion & Handover", desc: language === 'VI' ? "Nghiệm thu, tất toán toàn bộ chi phí, bàn giao tài liệu và bảo hành dự án." : "Acceptance, settle all costs, handover documents and project warranty." },
+    { num: "01", title: language === 'VI' ? "Tiếp nhận & đánh giá dự án" : "Project Intake & Assessment", desc: language === 'VI' ? "Ghi nhận thông tin dự án, mục tiêu và kỳ vọng. Phân tích tính khả thi, quy mô và ngân sách dự kiến." : "Record project information, goals, and expectations. Analyze feasibility, scale, and estimated budget." },
+    { num: "02", title: language === 'VI' ? "Tư vấn và thống nhất phương án" : "Consulting & Concept Agreement", desc: language === 'VI' ? "Thảo luận trực tiếp, làm rõ yêu cầu và thống nhất hướng tiếp cận thiết kế phù hợp nhất." : "Direct discussion, clarify requirements and agree on the most suitable design approach." },
+    { num: "03", title: language === 'VI' ? "Khái toán ngân sách và hợp đồng" : "Budget Estimate & Contract", desc: language === 'VI' ? "Khái toán chi phí chi tiết, minh bạch theo từng hạng mục. Ký kết hợp đồng rõ ràng, không phát sinh." : "Detailed, transparent cost estimate by line item. Clear contract signing with no hidden costs." },
+    { num: "04", title: language === 'VI' ? "Thiết kế & lên kế hoạch thi công" : "Design & Construction Planning", desc: language === 'VI' ? "Phát triển hồ sơ kiến trúc, bản vẽ kỹ thuật, phối cảnh 3D và lên tiến độ thi công chi tiết." : "Develop architectural documents, technical drawings, 3D renderings, and detailed construction schedule." },
+    { num: "05", title: language === 'VI' ? "Thi công & quản lý chất lượng" : "Construction & Quality Management", desc: language === 'VI' ? "Triển khai công trình với kiểm soát chặt chẽ Chất lượng – Chi phí – Tiến độ tại công trường." : "Execute construction with strict on-site control of Quality, Cost, and Schedule." },
+    { num: "06", title: language === 'VI' ? "Hoàn thành & bàn giao" : "Completion & Handover", desc: language === 'VI' ? "Nghiệm thu, tất toán toàn bộ chi phí, bàn giao hồ sơ hoàn công và bảo hành dự án." : "Acceptance, settle all costs, handover as-built documents and project warranty." },
   ];
 
   const services = [
     {
       id: "Hospitality",
       num: "01",
-      title: "HOSPITALITY",
-      desc: language === 'VI' ? "Khách sạn, Nhà hàng, Quán café, Bar, Resort" : "Hotels, Restaurants, Cafes, Bars, Resorts",
-      content: language === 'VI' 
-        ? "Giải pháp thiết kế và thi công trọn gói cho không gian F&B và lưu trú. Chúng tôi hiểu rằng trải nghiệm không gian là yếu tố cốt lõi giữ chân khách hàng. Từ bố trí công năng tối ưu cho vận hành đến ngôn ngữ thiết kế kể câu chuyện thương hiệu, Pepper Builders & Makers đồng hành cùng bạn tạo ra những điểm đến ấn tượng và hiệu quả kinh doanh cao."
-        : "Turnkey design and build solutions for F&B and accommodation spaces. We understand that spatial experience is the core element to retain customers. From optimal functional layout for operations to design language telling the brand story, Pepper Builders & Makers accompanies you to create impressive destinations and high business efficiency.",
+      title: "RENTAL & HOSPITALITY PROPERTIES",
+      desc: language === 'VI' ? "Khách sạn, Homestay, Căn hộ dịch vụ, Nhà hàng, Quán café, BĐS cho thuê" : "Hotels, Homestays, Serviced Apartments, Restaurants, Cafes, Rental Properties",
+      content: language === 'VI'
+        ? "Giải pháp thiết kế và thi công trọn gói cho bất động sản lưu trú và khai thác cho thuê. Chúng tôi giải bài toán tối ưu giữa chi phí đầu tư và giá trị khai thác, từ bố trí công năng tối ưu cho vận hành đến ngôn ngữ thiết kế tạo trải nghiệm khác biệt — biến mỗi tài sản thành nguồn thu bền vững với hiệu suất vượt trội."
+        : "Turnkey design and build solutions for hospitality and rental properties. We solve the optimization between investment cost and exploitation value, from optimal functional layout for operations to design language creating differentiated experiences — turning every asset into a sustainable revenue source with outstanding performance.",
       img: "https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBob3RlbCUyMGludGVyaW9yfGVufDF8fHx8MTc4MTE1NjA5NHww&ixlib=rb-4.1.0&q=80&w=1080",
       reverse: false
     },
     {
       id: "Residential",
       num: "02",
-      title: "RESIDENTIAL",
-      desc: language === 'VI' ? "Nhà phố, Biệt thự, Căn hộ cao cấp" : "Townhouses, Villas, Premium Apartments",
+      title: "PERSONALIZED HOMES",
+      desc: language === 'VI' ? "Nhà phố, Biệt thự, Căn hộ — Thiết kế theo phong cách sống riêng" : "Townhouses, Villas, Apartments — Designed for your lifestyle",
       content: language === 'VI'
-        ? "Không gian sống phản ánh cái tôi và phong cách sống của gia chủ. Với tiêu chuẩn hoàn thiện khắt khe, chúng tôi mang đến những giải pháp nội - ngoại thất tinh tế, hiện đại nhưng không kém phần ấm cúng. Mọi chi tiết từ vật liệu, ánh sáng đến đồ nội thất đều được cá nhân hóa để tạo nên tổ ấm thực sự cho bạn."
-        : "Living spaces reflect the ego and lifestyle of the owner. With strict finishing standards, we provide refined, modern yet cozy interior and exterior solutions. Every detail from materials, lighting to furniture is personalized to create a true home for you.",
+        ? "Không gian sống được thiết kế riêng, phản ánh phong cách và câu chuyện của gia chủ. Chúng tôi lắng nghe cách bạn sống, sinh hoạt và vận hành gia đình để tạo nên giải pháp nội - ngoại thất cá nhân hóa đến từng chi tiết. Mỗi vật liệu, mỗi góc sáng, mỗi đường nét đều mang dấu ấn riêng — để ngôi nhà thực sự là của bạn."
+        : "Bespoke living spaces designed to reflect your lifestyle and personal story. We listen to how you live, operate your household, and interact with your space to create interior and exterior solutions personalized to every detail. Every material, every light angle, every line carries your unique signature — so the home is truly yours.",
       img: "https://images.unsplash.com/photo-1564078516393-cf04bd966897?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsdXh1cnklMjBsaXZpbmclMjByb29tfGVufDF8fHx8MTc4MTEyODQ1M3ww&ixlib=rb-4.1.0&q=80&w=1080",
       reverse: true
     },
     {
       id: "Commercial",
       num: "03",
-      title: "COMMERCIAL",
-      desc: language === 'VI' ? "Văn phòng, Showroom, Retail, BĐS cho thuê" : "Offices, Showrooms, Retail, Rental Properties",
+      title: "COMMERCIAL SPACES",
+      desc: language === 'VI' ? "Văn phòng, Showroom, Retail, Không gian thương mại" : "Offices, Showrooms, Retail, Commercial Spaces",
       content: language === 'VI'
-        ? "Thiết kế văn phòng và không gian thương mại hướng tới sự linh hoạt, truyền cảm hứng và tăng năng suất. Đối với bất động sản cho thuê, chúng tôi tính toán bài toán chi phí - lợi nhuận tối ưu, đảm bảo công năng sử dụng lâu dài và gia tăng giá trị cho thuê trên thị trường."
-        : "Office and commercial space design geared towards flexibility, inspiration, and increased productivity. For rental properties, we calculate the optimal cost-profit equation, ensuring long-term usability and increasing rental value in the market.",
+        ? "Thiết kế và thi công không gian thương mại hướng tới hiệu quả vận hành và trải nghiệm thương hiệu. Từ văn phòng truyền cảm hứng làm việc, showroom kể câu chuyện sản phẩm, đến mặt bằng retail tối ưu hành trình khách hàng — chúng tôi biến không gian thành công cụ kinh doanh chiến lược."
+        : "Design and build commercial spaces geared towards operational efficiency and brand experience. From offices that inspire productivity, showrooms that tell product stories, to retail spaces that optimize customer journeys — we turn spaces into strategic business tools.",
       img: "https://images.unsplash.com/photo-1558959356-2f36c7322d3b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBvcGVuJTIwb2ZmaWNlJTIwaW50ZXJpb3J8ZW58MXx8fHwxNzgxMTg2ODU5fDA&ixlib=rb-4.1.0&q=80&w=1080",
       reverse: false
     }
@@ -68,9 +68,9 @@ export function Services() {
   const faqs = [
     {
       q: language === 'VI' ? "Quy trình thiết kế thi công của Pepper diễn ra như thế nào?" : "How does Pepper's design and build process work?",
-      a: language === 'VI' 
-        ? "Chúng tôi áp dụng quy trình 6 bước chặt chẽ: Tiếp nhận & Đánh giá -> Tư vấn & Thống nhất phương án -> Báo giá & Hợp đồng -> Thiết kế & Phối cảnh 3D -> Thi công & Giám sát -> Hoàn thành & Bàn giao. Xuyên suốt quá trình, khách hàng luôn được cập nhật tiến độ liên tục."
-        : "We apply a strict 6-step process: Receive & Evaluate -> Consulting & Concept Agreement -> Quotation & Contract -> Design & 3D Rendering -> Construction & Supervision -> Completion & Handover. Throughout the process, clients are always updated on the progress."
+      a: language === 'VI'
+        ? "Chúng tôi áp dụng quy trình 6 bước chặt chẽ: Tiếp nhận & đánh giá dự án → Tư vấn và thống nhất phương án → Khái toán ngân sách và hợp đồng → Thiết kế & lên kế hoạch thi công → Thi công & quản lý chất lượng → Hoàn thành & bàn giao. Xuyên suốt quá trình, khách hàng luôn được cập nhật tiến độ liên tục."
+        : "We apply a strict 6-step process: Project Intake & Assessment → Consulting & Concept Agreement → Budget Estimate & Contract → Design & Construction Planning → Construction & Quality Management → Completion & Handover. Throughout the process, clients are always updated on the progress."
     },
     {
       q: language === 'VI' ? "Pepper có thi công ngoài TP.HCM không?" : "Does Pepper undertake construction outside HCMC?",
@@ -139,30 +139,30 @@ export function Services() {
 
       {/* Services List */}
       <div className="bg-white">
-        {services.map((svc, index) => (
-          <section key={svc.id} className="py-20 md:py-32 border-b border-neutral-100 last:border-0 overflow-hidden">
-            <div className={`container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center ${svc.reverse ? 'lg:grid-flow-col-dense' : ''}`}>
-              
-              <motion.div 
+        {services.map((svc) => (
+          <section key={svc.id} className="min-h-screen border-b border-neutral-100 last:border-0 overflow-hidden flex items-center">
+            <div className={`container mx-auto px-6 md:px-12 py-16 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full ${svc.reverse ? 'lg:grid-flow-col-dense' : ''}`}>
+
+              <motion.div
                 className={`flex flex-col justify-center ${svc.reverse ? 'lg:col-start-2' : ''}`}
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, margin: "-100px" }}
                 variants={fadeUp}
               >
-                <div className="flex items-center gap-4 mb-8">
+                <div className="flex items-center gap-4 mb-6">
                   <span className="text-sm font-medium text-neutral-400">/{svc.num}</span>
                   <span className="text-xs font-bold tracking-widest text-neutral-500 uppercase">{svc.desc}</span>
                 </div>
-                
-                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 tracking-tight">{svc.title}</h2>
-                <p className="text-neutral-600 leading-relaxed mb-12 text-lg md:text-xl font-light">
+
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">{svc.title}</h2>
+                <p className="text-neutral-600 leading-relaxed mb-8 text-base md:text-lg font-light">
                   {svc.content}
                 </p>
-                
+
                 <div>
-                  <Link 
-                    href={`/projects?category=${svc.id}`} 
+                  <Link
+                    href={`/projects?category=${svc.id}`}
                     className="group inline-flex items-center gap-3 text-sm font-bold tracking-widest uppercase hover:text-neutral-500 transition-colors"
                   >
                     <span className="border-b border-black group-hover:border-neutral-500 pb-1 transition-colors">
@@ -172,8 +172,8 @@ export function Services() {
                   </Link>
                 </div>
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className={`relative ${svc.reverse ? 'lg:col-start-1' : ''}`}
                 initial="hidden"
                 whileInView="visible"
@@ -184,7 +184,7 @@ export function Services() {
                   <ImageWithFallback
                     src={svc.img}
                     alt={svc.title}
-                    className="w-full aspect-[4/5] md:aspect-[3/4] lg:aspect-square object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out"
+                    className="w-full aspect-[3/4] lg:aspect-[4/5] object-cover scale-100 group-hover:scale-105 transition-transform duration-1000 ease-out"
                   />
                 </div>
               </motion.div>

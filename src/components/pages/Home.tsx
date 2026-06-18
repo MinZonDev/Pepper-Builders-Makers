@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { ArrowRight, ArrowLeft, Building2, Home as HomeIcon, Briefcase } from "lucide-react";
+import { ArrowRight, BedDouble, House, Store } from "lucide-react";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { motion, AnimatePresence } from "motion/react";
 import { allProjects } from "@/data/projects";
@@ -19,55 +19,6 @@ const heroImages = [
 export default function HomeContent() {
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [activeFilter, setActiveFilter] = useState('ALL');
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(true);
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const dragStart = useRef({ x: 0, scrollLeft: 0 });
-
-  const updateScrollState = useCallback(() => {
-    const el = sliderRef.current;
-    if (!el) return;
-    const maxScroll = el.scrollWidth - el.clientWidth;
-    setCanScrollLeft(el.scrollLeft > 10);
-    setCanScrollRight(el.scrollLeft < maxScroll - 10);
-    setScrollProgress(maxScroll > 0 ? el.scrollLeft / maxScroll : 0);
-  }, []);
-
-  useEffect(() => {
-    const el = sliderRef.current;
-    if (!el) return;
-    updateScrollState();
-    el.addEventListener('scroll', updateScrollState, { passive: true });
-    return () => el.removeEventListener('scroll', updateScrollState);
-  }, [updateScrollState, activeFilter]);
-
-  const scrollSlider = (direction: 'left' | 'right') => {
-    const el = sliderRef.current;
-    if (!el) return;
-    const cardWidth = el.querySelector('a')?.offsetWidth || 400;
-    el.scrollBy({ left: direction === 'right' ? cardWidth + 32 : -(cardWidth + 32), behavior: 'smooth' });
-  };
-
-  const handleMouseDown = (e: React.MouseEvent) => {
-    const el = sliderRef.current;
-    if (!el) return;
-    setIsDragging(true);
-    dragStart.current = { x: e.pageX - el.offsetLeft, scrollLeft: el.scrollLeft };
-  };
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const el = sliderRef.current;
-    if (!el) return;
-    const x = e.pageX - el.offsetLeft;
-    const walk = (x - dragStart.current.x) * 1.5;
-    el.scrollLeft = dragStart.current.scrollLeft - walk;
-  };
-
-  const handleDragEnd = () => setIsDragging(false);
   const { language } = useLanguage();
 
   useEffect(() => {
@@ -78,8 +29,9 @@ export default function HomeContent() {
   }, []);
 
   const t = {
-    heroTitle: language === 'VI' ? "Thiết kế & Thi công toàn diện" : "Comprehensive Design & Build",
-    heroBtn: language === 'VI' ? "Nhận tư vấn miễn phí" : "Get Free Consultation",
+    heroSubtitle: language === 'VI' ? "Dịch vụ thiết kế & thi công toàn diện cho nhà ở, không gian lưu trú, thương mại và bất động sản khai thác." : "Comprehensive design & build for homes, hospitality, commercial spaces and investment properties.",
+    heroSlogan: language === 'VI' ? "Kiến tạo không gian.\nTạo lập giá trị." : "Create Spaces.\nCreate Value.",
+    heroBtn: language === 'VI' ? "NHẬN TƯ VẤN DỰ ÁN" : "GET PROJECT CONSULTATION",
     srvTitle: language === 'VI' ? "Dịch vụ nổi bật" : "Featured Services",
     srvDesc1: language === 'VI' ? "Khách sạn, Nhà hàng, Quán café, Bar, Resort với tiêu chuẩn thẩm mỹ và công năng vượt trội." : "Hotels, Restaurants, Cafes, Bars, Resorts with outstanding aesthetic and functional standards.",
     srvDesc2: language === 'VI' ? "Nhà phố, Biệt thự, Căn hộ cao cấp. Mang đậm dấu ấn cá nhân và phong cách sống." : "Townhouses, Villas, Premium Apartments. Deeply imbued with personal marks and lifestyles.",
@@ -132,30 +84,30 @@ export default function HomeContent() {
         </AnimatePresence>
         
         <div className="container mx-auto relative z-10 px-6 md:px-12 text-center text-white max-w-5xl">
-          <motion.h1 
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl md:text-7xl font-serif tracking-tight mb-6"
+            className="text-sm md:text-base font-sans font-light mb-8 opacity-80 max-w-2xl mx-auto leading-relaxed"
           >
-            {t.heroTitle}
+            {t.heroSubtitle}
           </motion.h1>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl font-light mb-12 opacity-90 text-center"
+            className="text-5xl md:text-7xl font-mono tracking-tight mb-12 whitespace-pre-line leading-tight"
           >
-            &quot;You Dream It, We Build It&quot;
+            {t.heroSlogan}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Link 
-              href="/contact" 
-              className="inline-block bg-[#111111] text-white rounded-none px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-neutral-800 transition-colors"
+            <Link
+              href="/contact"
+              className="inline-block border border-white text-white rounded-none px-8 py-4 font-bold text-sm tracking-widest uppercase hover:bg-white hover:text-[#111111] transition-colors"
             >
               {t.heroBtn}
             </Link>
@@ -168,21 +120,21 @@ export default function HomeContent() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
           {[
             {
-              title: "HOSPITALITY",
+              title: "Rental & Hospitality Properties",
               desc: t.srvDesc1,
-              icon: <Building2 size={24} className="mb-8 stroke-1" />,
+              icon: <BedDouble size={24} className="mb-8 stroke-1" />,
               link: "/services"
             },
             {
-              title: "RESIDENTIAL",
+              title: "Personalized Homes",
               desc: t.srvDesc2,
-              icon: <HomeIcon size={24} className="mb-8 stroke-1" />,
+              icon: <House size={24} className="mb-8 stroke-1" />,
               link: "/services"
             },
             {
-              title: "COMMERCIAL",
+              title: "Commercial Spaces",
               desc: t.srvDesc3,
-              icon: <Briefcase size={24} className="mb-8 stroke-1" />,
+              icon: <Store size={24} className="mb-8 stroke-1" />,
               link: "/services"
             },
           ].map((service, i) => (
@@ -221,140 +173,112 @@ export default function HomeContent() {
         </Link>
       </section>
 
-      {/* Section 3 - Dự án tiêu biểu (Horizontal Slider) */}
-      <section className="py-24 bg-white border-t border-[#E0E0E0] overflow-hidden">
-        {/* Header */}
-        <div className="container mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
-          <div>
-            <h2 className="text-3xl md:text-5xl font-serif tracking-tight mb-6">{t.projTitle}</h2>
-            <div className="flex flex-wrap gap-4 md:gap-8">
-              {['ALL', 'HOSPITALITY', 'RESIDENTIAL', 'COMMERCIAL'].map((filter) => (
+      {/* Section 3 - Dự án tiêu biểu (Filterable Grid 2x2) */}
+      <section className="py-24 bg-white border-t border-[#E0E0E0]">
+        <div className="container mx-auto px-6 md:px-12">
+          {/* Header */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-6">
+            <h2 className="text-3xl md:text-5xl font-mono tracking-tight">{t.projTitle}</h2>
+            <div className="flex flex-wrap gap-4 md:gap-6">
+              {([
+                { key: 'ALL', label: 'All' },
+                { key: 'HOSPITALITY', label: 'Rental & Hospitality' },
+                { key: 'RESIDENTIAL', label: 'Personalized Homes' },
+                { key: 'COMMERCIAL', label: 'Commercial Spaces' },
+              ] as const).map((filter) => (
                 <button
-                  key={filter}
-                  onClick={() => setActiveFilter(filter)}
+                  key={filter.key}
+                  onClick={() => setActiveFilter(filter.key)}
                   className={`text-xs font-bold tracking-widest uppercase transition-colors pb-1 ${
-                    activeFilter === filter 
-                      ? "text-[#111111] border-b-2 border-[#111111]" 
-                      : "text-[#555555] hover:text-[#111111]"
+                    activeFilter === filter.key
+                      ? "text-[#111111] border-b-2 border-[#111111]"
+                      : "text-neutral-600 hover:text-[#111111]"
                   }`}
                 >
-                  {filter}
+                  {filter.label}
                 </button>
               ))}
             </div>
           </div>
-          {/* Arrow Controls */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => scrollSlider('left')}
-              disabled={!canScrollLeft}
-              className={`w-12 h-12 border flex items-center justify-center transition-all ${
-                canScrollLeft
-                  ? 'border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-white'
-                  : 'border-[#E0E0E0] text-[#E0E0E0] cursor-not-allowed'
-              }`}
-              aria-label="Previous project"
-            >
-              <ArrowLeft size={18} />
-            </button>
-            <button
-              onClick={() => scrollSlider('right')}
-              disabled={!canScrollRight}
-              className={`w-12 h-12 border flex items-center justify-center transition-all ${
-                canScrollRight
-                  ? 'border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-white'
-                  : 'border-[#E0E0E0] text-[#E0E0E0] cursor-not-allowed'
-              }`}
-              aria-label="Next project"
-            >
-              <ArrowRight size={18} />
-            </button>
-          </div>
-        </div>
 
-        {/* Horizontal Slider */}
-        <div
-          ref={sliderRef}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleDragEnd}
-          onMouseLeave={handleDragEnd}
-          className={`flex gap-8 overflow-x-auto pl-6 md:pl-[max(1.5rem,calc((100vw-1280px)/2+1.5rem))] pr-12 pb-4 scroll-smooth snap-x snap-mandatory ${
-            isDragging ? 'cursor-grabbing select-none' : 'cursor-grab'
-          }`}
-          style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-        >
-          {allProjects
-            .filter((project) => activeFilter === 'ALL' || project.category.toUpperCase() === activeFilter)
-            .map((project) => (
-              <Link
-                href={`/projects/${project.id}`}
-                key={project.id}
-                className="group block shrink-0 snap-start"
-                style={{ width: 'clamp(300px, 40vw, 560px)' }}
-                draggable={false}
-                onClick={(e) => { if (isDragging) e.preventDefault(); }}
-              >
-                <div className="relative w-full aspect-[4/3] overflow-hidden mb-6 bg-[#F7F7F7]">
-                  <ImageWithFallback
-                    src={project.img}
-                    alt={project.name}
-                    className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
-                    draggable={false}
-                  />
-                  {/* Category badge */}
-                  <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm text-white px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase">
-                    {project.category}
-                  </div>
-                </div>
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="text-xl md:text-2xl font-serif text-[#111111] mb-1 group-hover:text-neutral-600 transition-colors">{project.name}</h3>
-                    <span className="text-xs text-[#999999]">
-                      {language === 'VI' ? project.location.vi : project.location.en} · {project.year}
-                    </span>
-                  </div>
-                  <div className="w-10 h-10 border border-[#E0E0E0] flex items-center justify-center shrink-0 mt-1 group-hover:border-[#111111] group-hover:bg-[#111111] group-hover:text-white transition-all">
-                    <ArrowRight size={16} />
-                  </div>
-                </div>
-              </Link>
-            ))}
-        </div>
+          {/* Grid 2x2 */}
+          <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <AnimatePresence mode="popLayout">
+              {allProjects
+                .filter((project) => activeFilter === 'ALL' || project.category.toUpperCase() === activeFilter)
+                .slice(0, 4)
+                .map((project) => (
+                  <motion.div
+                    layout
+                    key={project.id}
+                    initial={{ opacity: 0, scale: 0.97 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.97 }}
+                    transition={{ duration: 0.35 }}
+                  >
+                    <Link
+                      href={`/projects/${project.id}`}
+                      className="group block"
+                    >
+                      <div className="relative w-full aspect-[4/3] overflow-hidden bg-[#F7F7F7] mb-5">
+                        <ImageWithFallback
+                          src={project.img}
+                          alt={project.name}
+                          className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                        />
+                        <div className="absolute bottom-4 left-4 bg-black/70 backdrop-blur-sm text-white px-3 py-1.5 text-[10px] font-bold tracking-widest uppercase">
+                          {project.category}
+                        </div>
+                      </div>
+                      <div className="flex items-start justify-between gap-4">
+                        <div className="flex-1">
+                          <h3 className="text-lg md:text-xl font-mono text-[#111111] mb-1 group-hover:text-neutral-600 transition-colors">
+                            {project.name}
+                          </h3>
+                          <span className="text-xs text-neutral-500">
+                            {language === 'VI' ? project.location.vi : project.location.en} · {project.year}
+                          </span>
+                          <p className="text-sm text-[#555555] mt-2 leading-relaxed line-clamp-2">
+                            {language === 'VI' ? project.description.vi : project.description.en}
+                          </p>
+                        </div>
+                        <div className="w-10 h-10 border border-[#E0E0E0] flex items-center justify-center shrink-0 mt-1 group-hover:border-[#111111] group-hover:bg-[#111111] group-hover:text-white transition-all">
+                          <ArrowRight size={16} />
+                        </div>
+                      </div>
+                    </Link>
+                  </motion.div>
+                ))}
+            </AnimatePresence>
+          </motion.div>
 
-        {/* Progress Bar + CTA */}
-        <div className="container mx-auto px-6 md:px-12 mt-10 flex flex-col sm:flex-row items-center justify-between gap-6">
-          {/* Progress indicator */}
-          <div className="w-full sm:w-64 h-[2px] bg-[#E0E0E0] relative">
-            <div
-              className="absolute top-0 left-0 h-full bg-[#111111] transition-all duration-300 ease-out"
-              style={{ width: `${Math.max(10, scrollProgress * 100)}%` }}
-            />
+          {/* CTA */}
+          <div className="mt-12 text-center">
+            <Link href="/projects" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#111111] rounded-none text-white text-sm font-bold uppercase tracking-widest hover:bg-neutral-800 transition-colors">
+              {t.projAll} <ArrowRight size={16} />
+            </Link>
           </div>
-          <Link href="/projects" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#111111] rounded-none text-white text-sm font-bold uppercase tracking-widest hover:bg-neutral-800 transition-colors">
-            {t.projAll} <ArrowRight size={16} />
-          </Link>
         </div>
       </section>
 
-      {/* Section 4 - Số liệu thống kê */}
-      <section className="py-24 bg-[#F7F7F7] border-y border-[#E0E0E0]">
+      {/* Section 4 - Số liệu thống kê — ẩn theo yêu cầu */}
+      <section className="hidden">
         <div className="container mx-auto px-6 md:px-12">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             <div>
-              <span className="block text-5xl md:text-7xl font-serif mb-4">15+</span>
+              <span className="block text-5xl md:text-7xl font-mono mb-4">15+</span>
               <span className="text-xs font-bold text-[#555555] uppercase tracking-widest">{t.stat1}</span>
             </div>
             <div>
-              <span className="block text-5xl md:text-7xl font-serif mb-4">0</span>
+              <span className="block text-5xl md:text-7xl font-mono mb-4">0</span>
               <span className="text-xs font-bold text-[#555555] uppercase tracking-widest">{t.stat2}</span>
             </div>
             <div>
-              <span className="block text-5xl md:text-7xl font-serif mb-4">98%</span>
+              <span className="block text-5xl md:text-7xl font-mono mb-4">98%</span>
               <span className="text-xs font-bold text-[#555555] uppercase tracking-widest">{t.stat3}</span>
             </div>
             <div>
-              <span className="block text-5xl md:text-7xl font-serif mb-4">100%</span>
+              <span className="block text-5xl md:text-7xl font-mono mb-4">100%</span>
               <span className="text-xs font-bold text-[#555555] uppercase tracking-widest">{t.stat4}</span>
             </div>
           </div>
@@ -365,7 +289,7 @@ export default function HomeContent() {
       <section className="py-32 container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-start">
           <div className="lg:col-span-5">
-            <h2 className="text-4xl md:text-6xl font-serif tracking-tight leading-tight">{t.whyTitle}</h2>
+            <h2 className="text-4xl md:text-6xl font-mono tracking-tight leading-tight">{t.whyTitle}</h2>
           </div>
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-16">
             {[
@@ -387,7 +311,7 @@ export default function HomeContent() {
       {/* Section 7 - CTA */}
       <section className="bg-[#F7F7F7] border-t border-[#E0E0E0] py-32 px-6">
         <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <h2 className="text-3xl md:text-5xl font-serif tracking-tight leading-tight max-w-xl">{t.ctaTitle}</h2>
+          <h2 className="text-3xl md:text-5xl font-mono tracking-tight leading-tight max-w-xl">{t.ctaTitle}</h2>
           <div className="flex flex-col sm:flex-row lg:justify-end gap-4">
             <Link 
               href="/contact" 

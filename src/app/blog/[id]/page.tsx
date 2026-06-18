@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 import { blogPosts } from '@/data/blog';
 import { BlogDetail } from '@/components/pages/BlogDetail';
 import { ArticleJsonLd } from '@/lib/structured-data';
@@ -40,6 +41,7 @@ export default async function BlogDetailPage({
 }) {
   const { id } = await params;
   const post = blogPosts.find((p) => p.id === id);
+  if (!post) notFound();
 
   return (
     <>

@@ -10,7 +10,7 @@ export function Footer() {
   const { language } = useLanguage();
 
   const t = {
-    tagline: "You Dream It,\nWe Build It.",
+    tagline: "Create Spaces.\nCreate Value.",
     navTitle: language === 'VI' ? 'ĐIỀU HƯỚNG' : 'NAVIGATION',
     navLinks: [
       { name: language === 'VI' ? 'Giới thiệu' : 'About', path: '/about' },
@@ -20,9 +20,9 @@ export function Footer() {
     ],
     servicesTitle: language === 'VI' ? 'DỊCH VỤ' : 'SERVICES',
     servicesLinks: [
-      { name: 'Hospitality', path: '/services' },
-      { name: 'Residential', path: '/services' },
-      { name: 'Commercial', path: '/services' },
+      { name: language === 'VI' ? 'Cho thuê & Lưu trú' : 'Rental & Hospitality', path: '/services' },
+      { name: language === 'VI' ? 'Nhà ở Cá nhân hóa' : 'Personalized Homes', path: '/services' },
+      { name: language === 'VI' ? 'Không gian Thương mại' : 'Commercial Spaces', path: '/services' },
     ],
     contactTitle: language === 'VI' ? 'LIÊN HỆ' : 'CONTACT',
     address: '19 Hoàng Sa, Phường Sài Gòn, TP.HCM',
@@ -36,17 +36,17 @@ export function Footer() {
     <footer className="bg-[#0f1115] text-white pt-24 pb-12 mt-auto w-full">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-x-6 gap-y-12 md:gap-12 lg:gap-8 mb-16 md:mb-20">
-          
+
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-4 lg:col-span-4 flex flex-col items-start order-1 md:order-1">
             <Link href="/" className="mb-6">
-              <ImageWithFallback 
-                src={typeof logoImg === 'string' ? logoImg : logoImg.src} 
-                alt="Pepper Builders & Makers" 
+              <ImageWithFallback
+                src={typeof logoImg === 'string' ? logoImg : logoImg.src}
+                alt="Pepper Builders & Makers"
                 className="h-10 md:h-12 w-auto object-contain brightness-0 invert"
               />
             </Link>
-            <p className="text-lg md:text-xl lg:text-2xl font-serif text-white mb-8 md:mb-10 whitespace-pre-line leading-snug break-words max-w-full">
+            <p className="text-lg md:text-xl lg:text-2xl font-mono text-white mb-8 md:mb-10 whitespace-pre-line leading-snug break-words max-w-full">
               {t.tagline}
             </p>
             <div className="flex gap-3 md:gap-4 flex-wrap">

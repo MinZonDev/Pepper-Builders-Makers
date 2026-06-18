@@ -29,15 +29,16 @@ export function ProjectDetail({ id }: { id: string }) {
     backToList: language === 'VI' ? "Quay lại danh sách" : "Back to list",
     home: language === 'VI' ? "Trang chủ" : "Home",
     projectsLabel: language === 'VI' ? "Dự án" : "Projects",
-    client: language === 'VI' ? "Chủ đầu tư" : "Client",
-    location: language === 'VI' ? "Địa điểm" : "Location",
-    scale: language === 'VI' ? "Diện tích" : "Scale",
-    year: language === 'VI' ? "Thời gian" : "Year",
-    services: language === 'VI' ? "Hạng mục" : "Services",
+    client: "Client",
+    scopeOfWork: "Scope of Work",
+    partner: "Partner",
+    completionYear: "Completion Year",
+    location: "Location",
+    area: "Area",
     prevLabel: language === 'VI' ? "Dự án trước" : "Previous",
     nextLabel: language === 'VI' ? "Dự án tiếp theo" : "Next",
-    before: language === 'VI' ? "Hiện trạng (Before)" : "Before",
-    after: language === 'VI' ? "Hoàn thiện (After)" : "After",
+    before: "From Asset",
+    after: "to Experience",
     beforeAfterTitle: language === 'VI' ? "So sánh Hiện trạng & Hoàn thiện" : "Before & After Comparison",
   };
 
@@ -102,20 +103,24 @@ export function ProjectDetail({ id }: { id: string }) {
                 <span className="font-medium w-2/3 text-right">{project.client}</span>
               </li>
               <li className="flex justify-between py-5 border-b border-neutral-200 text-sm md:text-base">
-                <span className="text-neutral-500 w-1/3">{t.scale}</span>
-                <span className="font-medium w-2/3 text-right">{project.scale}</span>
+                <span className="text-neutral-500 w-1/3">{t.scopeOfWork}</span>
+                <span className="font-medium w-2/3 text-right">{language === 'VI' ? project.services.vi : project.services.en}</span>
               </li>
               <li className="flex justify-between py-5 border-b border-neutral-200 text-sm md:text-base">
-                <span className="text-neutral-500 w-1/3">{t.services}</span>
-                <span className="font-medium w-2/3 text-right">{language === 'VI' ? project.services.vi : project.services.en}</span>
+                <span className="text-neutral-500 w-1/3">{t.partner}</span>
+                <span className="font-medium w-2/3 text-right">{project.partner || 'Design by O9'}</span>
+              </li>
+              <li className="flex justify-between py-5 border-b border-neutral-200 text-sm md:text-base">
+                <span className="text-neutral-500 w-1/3">{t.completionYear}</span>
+                <span className="font-medium w-2/3 text-right">{project.year}</span>
               </li>
               <li className="flex justify-between py-5 border-b border-neutral-200 text-sm md:text-base">
                 <span className="text-neutral-500 w-1/3">{t.location}</span>
                 <span className="font-medium w-2/3 text-right">{language === 'VI' ? project.location.vi : project.location.en}</span>
               </li>
               <li className="flex justify-between py-5 border-b border-neutral-200 text-sm md:text-base">
-                <span className="text-neutral-500 w-1/3">{t.year}</span>
-                <span className="font-medium w-2/3 text-right">{project.year}</span>
+                <span className="text-neutral-500 w-1/3">{t.area}</span>
+                <span className="font-medium w-2/3 text-right">{project.scale}</span>
               </li>
             </ul>
           </div>
