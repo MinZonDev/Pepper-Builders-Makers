@@ -62,22 +62,13 @@ export function ProjectDetail({ id }: { id: string }) {
   return (
     <div className="pt-32 bg-white min-h-screen">
       <div className="container mx-auto px-6 md:px-12">
-        {/* Breadcrumb */}
-        <nav className="flex text-sm text-neutral-500 mb-12" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2">
-            <li>
-              <Link href="/" className="hover:text-black transition-colors">{t.home}</Link>
-            </li>
-            <li>/</li>
-            <li>
-              <Link href="/projects" className="hover:text-black transition-colors">{t.projectsLabel}</Link>
-            </li>
-            <li>/</li>
-            <li className="text-black font-medium" aria-current="page">
-              {project.name}
-            </li>
-          </ol>
-        </nav>
+        {/* Back Button */}
+        <Link
+          href="/projects"
+          className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-black transition-colors mb-12"
+        >
+          <ArrowLeft size={16} /> {t.projectsLabel}
+        </Link>
 
         {/* Title */}
         <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-12 uppercase">

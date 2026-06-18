@@ -55,22 +55,13 @@ export function BlogDetail({ id }: { id: string }) {
   return (
     <div className="pt-32 bg-white min-h-screen">
       <div className="container mx-auto px-6 md:px-12">
-        {/* Breadcrumb */}
-        <nav className="flex text-sm text-neutral-500 mb-12" aria-label="Breadcrumb">
-          <ol className="flex items-center space-x-2">
-            <li>
-              <Link href="/" className="hover:text-black transition-colors">{t.home}</Link>
-            </li>
-            <li>/</li>
-            <li>
-              <Link href="/blog" className="hover:text-black transition-colors">Blog</Link>
-            </li>
-            <li>/</li>
-            <li className="text-black font-medium truncate w-32 md:w-auto" aria-current="page">
-              {language === 'VI' ? post.title.vi : post.title.en}
-            </li>
-          </ol>
-        </nav>
+        {/* Back Button */}
+        <Link
+          href="/blog"
+          className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-black transition-colors mb-12"
+        >
+          <ArrowLeft size={16} /> Blog
+        </Link>
 
         {/* Header */}
         <div className="max-w-4xl mx-auto mb-16 text-center">

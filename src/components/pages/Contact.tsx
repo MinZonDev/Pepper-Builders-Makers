@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Clock, MapPin, Phone, Mail } from "lucide-react";
+import Link from "next/link";
+import { ArrowLeft, Clock, MapPin, Phone, Mail } from "lucide-react";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import * as Select from "@radix-ui/react-select";
 import { Check, ChevronDown } from "lucide-react";
@@ -53,8 +54,11 @@ export function Contact() {
   };
 
   return (
-    <div className="pt-24 min-h-screen bg-white">
+    <div className="pt-32 min-h-screen bg-white">
       <div className="container mx-auto px-6 md:px-12 py-16">
+        <Link href="/" className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-black transition-colors mb-12">
+          <ArrowLeft size={16} /> {language === 'VI' ? 'Trang chủ' : 'Home'}
+        </Link>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           
           {/* Info Section */}

@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import logoImg from "@/app/logo.svg";
+import logoCompactImg from "@/app/logo-compact.svg";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -57,11 +58,24 @@ export function Header() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <Link href="/" className="z-50">
-          <ImageWithFallback 
-            src={typeof logoImg === 'string' ? logoImg : logoImg.src} 
-            alt="Pepper Builders & Makers" 
-            className={`h-10 md:h-14 w-auto object-contain transition-all duration-300 ${isMobileMenuOpen || isTransparent ? "brightness-0 invert" : ""}`}
+        <Link href="/" className="z-50 relative flex items-center">
+          <ImageWithFallback
+            src={typeof logoImg === 'string' ? logoImg : logoImg.src}
+            alt="Pepper Builders & Makers"
+            className={`w-auto object-contain transition-all duration-500 ease-out ${
+              isMobileMenuOpen || isTransparent ? "brightness-0 invert" : ""
+            } ${
+              isHomePage && !isScrolled ? "h-14 md:h-20 opacity-100 visible" : "h-14 md:h-20 opacity-0 invisible absolute"
+            }`}
+          />
+          <ImageWithFallback
+            src={typeof logoCompactImg === 'string' ? logoCompactImg : logoCompactImg.src}
+            alt="Pepper Builders & Makers"
+            className={`w-auto object-contain transition-all duration-500 ease-out ${
+              isMobileMenuOpen ? "brightness-0 invert" : ""
+            } ${
+              isHomePage && !isScrolled ? "h-8 md:h-10 opacity-0 invisible absolute" : "h-8 md:h-10 opacity-100 visible"
+            }`}
           />
         </Link>
 

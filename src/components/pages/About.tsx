@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, Hexagon, Square, Triangle, Circle } from "lucide-react";
+import { ArrowLeft, ArrowRight, Hexagon, Square, Triangle, Circle } from "lucide-react";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { motion } from "motion/react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -70,7 +70,12 @@ export function About() {
 
   return (
     <div className="pt-32 bg-white">
-      
+      <div className="container mx-auto px-6 md:px-12 mb-8">
+        <Link href="/" className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-black transition-colors">
+          <ArrowLeft size={16} /> {language === 'VI' ? 'Trang chủ' : 'Home'}
+        </Link>
+      </div>
+
       {/* Hero Section */}
       <section className="container mx-auto px-6 md:px-12 mb-12">
         <motion.h1
@@ -209,37 +214,6 @@ export function About() {
 
           </div>
         </div>
-      </section>
-
-      {/* Certifications & Partners */}
-      <section className="py-24 md:py-32 container mx-auto px-6 md:px-12">
-        <motion.div
-          initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-        >
-          <p className="text-xs font-bold tracking-widest uppercase text-neutral-500 mb-12">
-            {language === 'VI' ? 'Chứng nhận & Đối tác' : 'Certifications & Partners'}
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 border-t border-neutral-200 pt-12">
-            {[
-              { name: 'Design by O9', abbr: 'O9' },
-              { name: 'VICOSTONE', abbr: 'VCS' },
-              { name: 'HAFELE', abbr: 'HFL' },
-              { name: 'HÄFELE PARTNER', abbr: 'HP' },
-            ].map((partner, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="flex flex-col items-center justify-center py-8 border border-neutral-200 grayscale hover:grayscale-0 hover:border-neutral-400 transition-all"
-              >
-                <span className="text-2xl font-mono font-bold text-neutral-400 tracking-widest">{partner.abbr}</span>
-                <span className="text-[10px] tracking-widest uppercase text-neutral-400 mt-2">{partner.name}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </section>
 
       {/* Big CTA */}

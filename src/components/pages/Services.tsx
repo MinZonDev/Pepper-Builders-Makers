@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowLeft, ArrowRight, ChevronDown } from "lucide-react";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import * as Accordion from "@radix-ui/react-accordion";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -113,6 +113,12 @@ export function Services() {
 
   return (
     <div className="pt-20 md:pt-28">
+      {/* Back to Home */}
+      <div className="container mx-auto px-6 md:px-12 pt-12">
+        <Link href="/" className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-black transition-colors">
+          <ArrowLeft size={16} /> {language === 'VI' ? 'Trang chủ' : 'Home'}
+        </Link>
+      </div>
       {/* Editorial Hero Section */}
       <section className="bg-white py-24 md:py-32 border-b border-neutral-100">
         <motion.div 
