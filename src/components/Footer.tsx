@@ -10,7 +10,7 @@ export function Footer() {
   const { language } = useLanguage();
 
   const t = {
-    tagline: "Create Spaces.\nCreate Value.",
+    tagline: language === 'VI' ? "Kiến tạo không gian.\nTạo lập giá trị." : "Create Spaces.\nCreate Value.",
     navTitle: language === 'VI' ? 'ĐIỀU HƯỚNG' : 'NAVIGATION',
     navLinks: [
       { name: language === 'VI' ? 'Giới thiệu' : 'About', path: '/about' },
@@ -28,8 +28,8 @@ export function Footer() {
     address: '19 Hoàng Sa, Phường Sài Gòn, TP.HCM',
     phone: '(+84) 931 888 149',
     email: 'info@pepper.builders',
-    copyright: '© 2026 Pepper Builders & Makers. Bảo lưu mọi quyền.',
-    design: 'Thiết kế & Thi công trọn gói.'
+    copyright: language === 'VI' ? '© 2026 Pepper Builders & Makers. Bảo lưu mọi quyền.' : '© 2026 Pepper Builders & Makers. All rights reserved.',
+    design: language === 'VI' ? 'Thiết kế & Thi công trọn gói.' : 'Design & Build.'
   };
 
   return (
@@ -50,9 +50,9 @@ export function Footer() {
               {t.tagline}
             </p>
             <div className="flex gap-3 md:gap-4 flex-wrap">
-              <a href="#" aria-label="Facebook" className="w-8 h-8 md:w-10 md:h-10 border border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-white hover:border-white transition-all"><Facebook size={16} /></a>
-              <a href="#" aria-label="Instagram" className="w-8 h-8 md:w-10 md:h-10 border border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-white hover:border-white transition-all"><Instagram size={16} /></a>
-              <a href="#" aria-label="LinkedIn" className="w-8 h-8 md:w-10 md:h-10 border border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-white hover:border-white transition-all"><Linkedin size={16} /></a>
+              <a href="https://www.facebook.com/PepperBuilders/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="w-8 h-8 md:w-10 md:h-10 border border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-white hover:border-white transition-all"><Facebook size={16} /></a>
+              <a href="https://www.instagram.com/pepper.builders/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-8 h-8 md:w-10 md:h-10 border border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-white hover:border-white transition-all"><Instagram size={16} /></a>
+              <a href="https://www.linkedin.com/company/pepper-builders-makers/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="w-8 h-8 md:w-10 md:h-10 border border-neutral-700 flex items-center justify-center text-neutral-400 hover:text-white hover:border-white transition-all"><Linkedin size={16} /></a>
             </div>
           </div>
 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, Clock, MapPin, Phone, Mail } from "lucide-react";
+import { ArrowLeft, Clock, MapPin, Phone, Mail, Facebook, Instagram, Linkedin, MessageCircle } from "lucide-react";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import * as Select from "@radix-ui/react-select";
 import { Check, ChevronDown } from "lucide-react";
@@ -83,7 +83,7 @@ export function Contact() {
                 <Phone className="text-neutral-400 shrink-0" size={24} />
                 <div>
                   <h3 className="font-semibold mb-1">{t.hotline}</h3>
-                  <p className="text-neutral-600">(+84) 931 888 149</p>
+                  <a href="tel:+84931888149" className="text-neutral-600 hover:text-black transition-colors">(+84) 931 888 149</a>
                 </div>
               </div>
 
@@ -91,7 +91,7 @@ export function Contact() {
                 <Mail className="text-neutral-400 shrink-0" size={24} />
                 <div>
                   <h3 className="font-semibold mb-1">{t.email}</h3>
-                  <p className="text-neutral-600">info@pepper.builders</p>
+                  <a href="mailto:info@pepper.builders" className="text-neutral-600 hover:text-black transition-colors">info@pepper.builders</a>
                 </div>
               </div>
 
@@ -102,6 +102,21 @@ export function Contact() {
                   <p className="text-neutral-600">{t.hoursVal}</p>
                 </div>
               </div>
+            </div>
+
+            <div className="flex items-center gap-4 mb-12">
+              <a href="https://zalo.me/0931888149" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-neutral-200 flex items-center justify-center text-neutral-400 hover:text-black hover:border-black transition-all" aria-label="Zalo">
+                <MessageCircle size={18} />
+              </a>
+              <a href="https://www.facebook.com/PepperBuilders/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-neutral-200 flex items-center justify-center text-neutral-400 hover:text-black hover:border-black transition-all" aria-label="Facebook">
+                <Facebook size={18} />
+              </a>
+              <a href="https://www.instagram.com/pepper.builders/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-neutral-200 flex items-center justify-center text-neutral-400 hover:text-black hover:border-black transition-all" aria-label="Instagram">
+                <Instagram size={18} />
+              </a>
+              <a href="https://www.linkedin.com/company/pepper-builders-makers/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-neutral-200 flex items-center justify-center text-neutral-400 hover:text-black hover:border-black transition-all" aria-label="LinkedIn">
+                <Linkedin size={18} />
+              </a>
             </div>
 
             <div className="w-full h-64">
