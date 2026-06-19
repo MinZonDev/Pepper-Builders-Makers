@@ -123,19 +123,19 @@ export default function HomeContent() {
               title: "Rental & Hospitality Properties",
               desc: t.srvDesc1,
               icon: <BedDouble size={24} className="mb-8 stroke-1" />,
-              link: "/services"
+              link: "/services#Hospitality"
             },
             {
               title: "Personalized Homes",
               desc: t.srvDesc2,
               icon: <House size={24} className="mb-8 stroke-1" />,
-              link: "/services"
+              link: "/services#Residential"
             },
             {
               title: "Commercial Spaces",
               desc: t.srvDesc3,
               icon: <Store size={24} className="mb-8 stroke-1" />,
-              link: "/services"
+              link: "/services#Commercial"
             },
           ].map((service, i) => (
             <div key={i} className="border border-[#E0E0E0] bg-white p-10 flex flex-col items-start -ml-[1px] -mt-[1px]">

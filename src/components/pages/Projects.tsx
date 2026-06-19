@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { motion, AnimatePresence } from "motion/react";
@@ -16,8 +17,16 @@ const categories = [
 ];
 
 export function Projects() {
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get("category");
   const [activeFilter, setActiveFilter] = useState("all");
   const { language } = useLanguage();
+
+  useEffect(() => {
+    if (categoryParam && categories.some(c => c.id === categoryParam)) {
+      setActiveFilter(categoryParam);
+    }
+  }, [categoryParam]);
 
   const filteredProjects = activeFilter === "all" 
     ? allProjects 

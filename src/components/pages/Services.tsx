@@ -146,7 +146,7 @@ export function Services() {
       {/* Services List */}
       <div className="bg-white">
         {services.map((svc) => (
-          <section key={svc.id} className="min-h-screen border-b border-neutral-100 last:border-0 overflow-hidden flex items-center">
+          <section key={svc.id} id={svc.id} className="min-h-screen border-b border-neutral-100 last:border-0 overflow-hidden flex items-center scroll-mt-24">
             <div className={`container mx-auto px-6 md:px-12 py-16 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center w-full ${svc.reverse ? 'lg:grid-flow-col-dense' : ''}`}>
 
               <motion.div
