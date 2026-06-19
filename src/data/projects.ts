@@ -12,6 +12,7 @@ export type Project = {
   scale: string;
   services: { vi: string; en: string };
   partner?: string;
+  tagline?: { vi: string; en: string };
 };
 
 const u = (id: string) => `https://images.unsplash.com/photo-${id}?w=1080&q=80&fit=crop&auto=format`;
@@ -34,6 +35,7 @@ export const allProjects: Project[] = [
     scale: '950 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Boutique stay thuần khiết, tối ưu trải nghiệm lưu trú giữa lòng đô thị.', en: 'A pure boutique stay, optimized for urban hospitality experience.' },
   },
   {
     id: 'the-global-city-2',
@@ -52,6 +54,7 @@ export const allProjects: Project[] = [
     scale: '180 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Căn hộ cao cấp với bếp mở, đá marble và gỗ sẫm — sang trọng mà ấm cúng.', en: 'Premium apartment with open kitchen, marble and dark wood — luxurious yet warm.' },
   },
   {
     id: 'the-global-city-1',
@@ -70,6 +73,7 @@ export const allProjects: Project[] = [
     scale: '155 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Japandi tinh tế — tối giản Nhật Bản gặp gỡ ấm áp Scandinavian.', en: 'Refined Japandi — Japanese minimalism meets Scandinavian warmth.' },
   },
   {
     id: 'the-parkland-penthouse',
@@ -83,11 +87,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Penthouse đỉnh tòa tại The Parkland với không gian kép thông tầng, đón ánh sáng tự nhiên 270°. Thiết kế khai thác tối đa tầm nhìn toàn cảnh thành phố, kết hợp nội thất cao cấp nhập khẩu.',
       en: 'A top-floor penthouse at The Parkland featuring double-height interiors and 270° natural light exposure. The design maximizes panoramic city views while incorporating premium imported furnishings.',
-    },
+  },
     client: 'Tư gia',
     scale: '320 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Penthouse thông tầng, tầm nhìn 270° toàn cảnh thành phố.', en: 'Double-height penthouse with 270° panoramic city views.' },
   },
   {
     id: 'bare-dakao',
@@ -101,10 +106,11 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Chi nhánh thứ hai của thương hiệu Bare tại phường Đakao, Quận 1. Thiết kế giữ nguyên DNA thương hiệu với tông màu trung tính, nội thất handmade và ánh sáng tối giản, tạo nên không gian nghỉ ngơi chân thực.',
       en: 'The second branch of the Bare brand in Dakao, District 1. The design preserves the brand DNA with neutral tones, handmade furnishings, and minimalist lighting, creating an authentic resting space.',
-    },
+  },
     client: 'Bare Group',
     scale: '720 m²',
     services: { vi: 'Thiết kế & Thi công trọn gói', en: 'Full Design & Build' },
+    tagline: { vi: 'Chi nhánh Bare giữ nguyên DNA thương hiệu — trung tính, handmade, tối giản.', en: 'Bare branch preserving brand DNA — neutral, handmade, minimalist.' },
   },
   {
     id: 'the-crest-duplex',
@@ -118,11 +124,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Căn duplex hai tầng tại The Crest với bếp và phòng khách thông tầng, sử dụng gỗ tối màu kết hợp tông màu trung tính. Không gian sống được bố trí mạch lạc, phân biệt rõ khu vực công cộng và riêng tư.',
       en: 'A two-level duplex at The Crest featuring a double-height kitchen and living area with dark wood and neutral tones. The living space is logically arranged with clear separation between public and private zones.',
-    },
+  },
     client: 'Tư gia',
     scale: '210 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Duplex thông tầng với phân khu công cộng và riêng tư rõ ràng.', en: 'Double-height duplex with clear public and private zoning.' },
   },
   {
     id: 'dalcheeni-indian-restaurant',
@@ -136,11 +143,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Nhà hàng Ấn Độ Dalcheeni với không gian ấm nóng mang đặc trưng kiến trúc Nam Á — hoa văn, mái vòm, màu sắc rực rỡ. Thiết kế tạo ra trải nghiệm ẩm thực đắm chìm, mang khách hàng đến tận những con phố Mumbai.',
       en: 'Dalcheeni Indian Restaurant with a warm space bearing South Asian architectural character — intricate patterns, arches, and vibrant colors. The design creates an immersive dining experience, transporting guests to the streets of Mumbai.',
-    },
+  },
     client: 'Dalcheeni F&B',
     scale: '280 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Trải nghiệm ẩm thực đắm chìm mang kiến trúc Nam Á đến Sài Gòn.', en: 'Immersive dining experience bringing South Asian architecture to Saigon.' },
   },
   {
     id: 'tiny-house',
@@ -154,10 +162,11 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Nhà phố đứng cao vút giữa lòng đô thị, tối ưu hóa mọi diện tích trên từng tầng bằng thiết kế thông minh. Mặt tiền kết hợp vách kính, gỗ tếch và sân trồng cây xanh tạo thẩm mỹ hiện đại nhưng hài hòa với phố cổ.',
       en: 'A tall narrow townhouse in the urban fabric, optimizing every square meter on each floor through intelligent design. The facade combines glass panels, teak wood, and vertical gardens for a modern yet contextual aesthetic.',
-    },
+  },
     client: 'Tư gia',
     scale: '90 m²',
     services: { vi: 'Thiết kế Kiến trúc & Nội thất', en: 'Architecture & Interior Design' },
+    tagline: { vi: 'Nhà phố hẹp tối ưu từng mét vuông bằng thiết kế thông minh.', en: 'Narrow townhouse maximizing every square meter through intelligent design.' },
   },
   {
     id: 'the-marq',
@@ -171,11 +180,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Căn hộ hạng sang tại The Marq — khu phức hợp đẳng cấp bậc nhất Quận 1. Thiết kế lấy cảm hứng từ sự thuần khiết và thanh thản với tông màu beige ấm, vải lanh tự nhiên và điểm nhấn nghệ thuật treo tường tinh tế.',
       en: 'A luxury apartment at The Marq — the premier residential complex in District 1. The design draws inspiration from purity and serenity with warm beige tones, natural linen fabrics, and refined wall art accents.',
-    },
+  },
     client: 'Tư gia',
     scale: '165 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Căn hộ hạng sang lấy cảm hứng từ sự thuần khiết và thanh thản.', en: 'Luxury apartment inspired by purity and serenity.' },
   },
   {
     id: 'bare-hyphen',
@@ -189,11 +199,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Không gian lưu trú đậm chất công nghiệp — sàn bê tông, tường gạch thô, thanh thép và ánh đèn vàng ấm. Bare Hyphen như dấu gạch nối giữa nghệ thuật đường phố và sự tiện nghi hiện đại, thu hút giới sáng tạo và nghệ sĩ.',
       en: 'An accommodation space with strong industrial character — concrete floors, raw brick walls, steel rails, and warm amber lighting. Bare Hyphen is a hyphen between street art and modern comfort, attracting creatives and artists.',
-    },
+  },
     client: 'Bare Group',
     scale: '640 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Dấu gạch nối giữa nghệ thuật đường phố và sự tiện nghi hiện đại.', en: 'A hyphen between street art and modern comfort.' },
   },
   {
     id: 'the-cave',
@@ -207,11 +218,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Không gian thương mại "The Cave" với ý tưởng hang động đô thị — vòm đá, ánh sáng trũng thấp và các ngõ ngách bí ẩn. Thiết kế tạo ra một trải nghiệm khám phá độc đáo, khuyến khích sự tò mò của khách ghé thăm.',
       en: 'A commercial space "The Cave" with an urban cave concept — stone arches, low-recessed lighting, and mysterious passageways. The design creates a unique exploratory experience, encouraging the curiosity of visitors.',
-    },
+  },
     client: 'Tư nhân',
     scale: '380 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Hang động đô thị — trải nghiệm khám phá khuyến khích sự tò mò.', en: 'Urban cave — an exploratory experience that encourages curiosity.' },
   },
   {
     id: 'bare-han',
@@ -225,11 +237,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Bare Han kết hợp nội thất công nghiệp-chic với điểm nhấn màu xanh cobalt đặc trưng. Phòng lưu trú được thiết kế đa năng — giường, sofa da, bàn ăn — trong cùng một không gian mở, phù hợp cho du khách dài hạn.',
       en: 'Bare Han combines industrial-chic interiors with a distinctive cobalt blue accent. The accommodation is designed as a multifunctional space — bed, leather sofa, dining table — all in one open area, ideal for long-stay guests.',
-    },
+  },
     client: 'Bare Group',
     scale: '850 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Không gian đa năng industrial-chic cho du khách lưu trú dài hạn.', en: 'Multifunctional industrial-chic space for long-stay guests.' },
   },
   {
     id: 'bare-chic',
@@ -243,10 +256,11 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Bare Chic là sự gặp gỡ giữa vẻ đẹp công nghiệp và sự tinh tế đô thị. Mặt tiền tòa nhà sử dụng tông xanh lam đậm kết hợp cửa gỗ vàng, tạo ấn tượng mạnh trên con hẻm nhỏ và nhận diện thương hiệu độc đáo.',
       en: 'Bare Chic is a meeting point between industrial beauty and urban sophistication. The building facade uses deep teal tones paired with golden wood doors, making a strong impression on the narrow alley with a distinctive brand identity.',
-    },
+  },
     client: 'Bare Group',
     scale: '1.200 m²',
     services: { vi: 'Thiết kế & Thi công trọn gói', en: 'Full Design & Build' },
+    tagline: { vi: 'Boutique stay có concept riêng, tối ưu trải nghiệm lưu trú và khả năng khai thác.', en: 'Concept-driven boutique stay, optimized for guest experience and rental yield.' },
   },
   {
     id: 'kashew-cheese-deli',
@@ -260,11 +274,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Quán deli phô mai thuần chay với sân vườn cây xanh bao quanh và không gian ngồi ngoài trời thoải mái. Thiết kế mở đón ánh nắng và gió trời, hòa quyện giữa căn nhà cũ cải tạo và khu vườn tự nhiên đầy sức sống.',
       en: 'A vegan cheese deli surrounded by lush green gardens with comfortable outdoor seating. The open design welcomes sunlight and natural breeze, blending a renovated heritage house with a vibrant natural garden.',
-    },
+  },
     client: 'Kashew F&B',
     scale: '350 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Deli thuần chay hòa quyện nhà cũ cải tạo và khu vườn tự nhiên.', en: 'Vegan deli blending a renovated heritage house with a natural garden.' },
   },
   {
     id: 'the-nang-suites',
@@ -278,11 +293,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Tổ hợp phòng nghỉ phong cách Nhật Bản tại Đà Nẵng với tấm chia phòng gỗ hình học, đệm sàn truyền thống và ánh sáng khuếch tán mềm mại. Không gian mang lại cảm giác thanh thản và chú tâm, hòa quyện với ánh nắng biển Miền Trung.',
       en: 'A Japanese-style suite complex in Da Nang featuring geometric wooden room dividers, traditional floor cushions, and soft diffused lighting. The space evokes a sense of serenity and mindfulness, harmonizing with Central Vietnam coastal sunshine.',
-    },
+  },
     client: 'Nắng Hospitality',
     scale: '2.100 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Nhà phố chuyển hóa thành không gian lưu trú có ánh sáng, layout và trải nghiệm riêng.', en: 'Townhouse transformed into a hospitality space with distinctive light, layout and experience.' },
   },
   {
     id: 'chi-bu-riverside-resort',
@@ -296,10 +312,11 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Khu nghỉ dưỡng sinh thái ven sông Đồng Nai với kiến trúc hoà mình vào thiên nhiên. Mái ngói truyền thống, bể bơi vô cực hướng sông và cây xanh bao quanh tạo nên không gian chữa lành đích thực giữa thiên nhiên phương Nam.',
       en: 'An eco-resort along the Dong Nai River with architecture that blends into nature. Traditional tiled roofs, an infinity pool facing the river, and surrounding greenery create an authentic healing space amid Southern Vietnamese nature.',
-    },
+  },
     client: 'Chi-Bu Retreat',
     scale: '5.000 m²',
     services: { vi: 'Thiết kế Kiến trúc & Cảnh quan', en: 'Architecture & Landscape Design' },
+    tagline: { vi: 'Khu nghỉ dưỡng sinh thái ven sông, kiến trúc hòa vào thiên nhiên.', en: 'Eco-resort along the river, architecture blending into nature.' },
   },
   {
     id: 'chi-bu-dorm-and-camp',
@@ -313,10 +330,11 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Khu camping & ký túc xá sinh thái nằm ngay cạnh Chi-Bu Riverside, rải rác dọc bờ sông với các cabin mái lá và bãi trại mở. Thiết kế cảnh quan tôn trọng tự nhiên, tạo trải nghiệm cắm trại nguyên bản cho nhóm bạn trẻ.',
       en: 'An eco-camping and dormitory complex adjacent to Chi-Bu Riverside, scattered along the riverbank with thatched-roof cabins and open campsites. The landscape design respects the natural environment, creating an authentic camping experience for youth groups.',
-    },
+  },
     client: 'Chi-Bu Retreat',
     scale: '8.000 m²',
     services: { vi: 'Thiết kế Cảnh quan & Thi công', en: 'Landscape Design & Build' },
+    tagline: { vi: 'Camping sinh thái nguyên bản dọc bờ sông cho nhóm bạn trẻ.', en: 'Authentic eco-camping along the riverbank for youth groups.' },
   },
   {
     id: 'lucky-palace-apartment',
@@ -330,11 +348,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Căn hộ tại Lucky Palace với phong cách Art Deco hiện đại — đường nét hình học, vật liệu đồng mạ vàng và vải nhung cao cấp. Không gian toát lên sự xa hoa kín đáo và đẳng cấp của chủ nhân.',
       en: 'An apartment at Lucky Palace with a modern Art Deco style — geometric lines, gold-plated brass accents, and premium velvet fabrics. The space exudes understated luxury and the refined taste of its owner.',
-    },
+  },
     client: 'Tư gia',
     scale: '120 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Art Deco hiện đại — đường nét hình học, đồng mạ vàng và nhung cao cấp.', en: 'Modern Art Deco — geometric lines, gold-plated brass and premium velvet.' },
   },
   {
     id: 'bare-gallery',
@@ -348,10 +367,11 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Không gian gallery thương mại đứng thẳng và mảnh theo kết cấu đô thị dày đặc, với mặt tiền tối giản và các ô cửa sổ theo nhịp điệu đều đặn. Bare Gallery là nơi trưng bày nghệ thuật và thiết kế trong hình thái kiến trúc thuần khiết nhất.',
       en: 'A commercial gallery space that stands tall and slim within the dense urban fabric, featuring a minimalist facade with rhythmically spaced windows. Bare Gallery is a venue for art and design presented in the purest architectural form.',
-    },
+  },
     client: 'Bare Group',
     scale: '1.500 m²',
     services: { vi: 'Thiết kế Kiến trúc & Thi công', en: 'Architecture Design & Build' },
+    tagline: { vi: 'Gallery thương mại trưng bày nghệ thuật trong hình thái kiến trúc thuần khiết.', en: 'Commercial gallery showcasing art in the purest architectural form.' },
   },
   {
     id: 'bare-indochine',
@@ -365,10 +385,11 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Không gian lưu trú Bare Indochine lấy cảm hứng từ kiến trúc thuộc địa Pháp-Việt với cửa chớp xanh, gạch bông hoa văn và đồ nội thất gỗ cổ điển. Mỗi phòng như một trang nhật ký của Sài Gòn thập niên 1930.',
       en: 'The Bare Indochine accommodation space is inspired by French-Vietnamese colonial architecture with green shutters, patterned encaustic tiles, and vintage wooden furniture. Each room reads like a page from a 1930s Saigon diary.',
-    },
+  },
     client: 'Bare Group',
     scale: '1.100 m²',
     services: { vi: 'Thiết kế & Thi công trọn gói', en: 'Full Design & Build' },
+    tagline: { vi: 'Lưu trú lấy cảm hứng kiến trúc thuộc địa Pháp-Việt thập niên 1930.', en: 'Accommodation inspired by 1930s French-Vietnamese colonial architecture.' },
   },
   {
     id: 'pmh-penthouse',
@@ -382,11 +403,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Penthouse rộng lớn tại Phú Mỹ Hưng với trần bê tông mộc, tường đá tự nhiên và hệ đèn chiếu điểm sang trọng. Không gian mở thoáng, linh hoạt bố trí đệm ngồi thấp và sofa để phù hợp với lối sống hiện đại.',
       en: 'A spacious penthouse in Phu My Hung with raw concrete ceilings, natural stone feature walls, and elegant spot lighting. The open, flexible space with low-profile cushion seating and sofas suits a modern lifestyle.',
-    },
+  },
     client: 'Tư gia',
     scale: '380 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Penthouse bê tông mộc, đá tự nhiên — không gian mở linh hoạt.', en: 'Raw concrete penthouse with natural stone — flexible open space.' },
   },
   {
     id: 'the-park-apartment',
@@ -400,11 +422,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Căn hộ tại The Park Phú Mỹ Hưng với phong cách hiện đại, mở rộng không gian bằng gương lớn và tông màu sáng. Thiết kế tối ưu ánh sáng tự nhiên từ hệ cửa kính hướng công viên, mang lại cảm giác rộng rãi và trong lành.',
       en: 'An apartment at The Park Phu My Hung with a contemporary style, expanding the space with large mirrors and light tones. The design optimizes natural light from park-facing glass doors, creating a spacious and refreshing feel.',
-    },
+  },
     client: 'Tư gia',
     scale: '130 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Căn hộ hướng công viên, tối ưu ánh sáng tự nhiên và cảm giác rộng rãi.', en: 'Park-facing apartment maximizing natural light and spacious feel.' },
   },
   {
     id: 'vista-verde-apartment-2',
@@ -418,11 +441,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Căn hộ Vista Verde thứ hai với phong cách Mediterranean ấm áp — tông màu kem và đất, vật liệu đá và gỗ ô liu. Không gian bếp và phòng khách thông thoáng, phù hợp với gia đình trẻ năng động.',
       en: 'The second Vista Verde apartment with a warm Mediterranean style — cream and earth tones, stone and olive wood materials. The open kitchen and living space is ideal for young, active families.',
-    },
+  },
     client: 'Tư gia',
     scale: '95 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Mediterranean ấm áp — tông kem, đá và gỗ ô liu cho gia đình trẻ.', en: 'Warm Mediterranean — cream tones, stone and olive wood for young families.' },
   },
   {
     id: 'vista-verde-apartment-1',
@@ -436,11 +460,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Căn hộ nhỏ gọn tại Vista Verde được thiết kế theo phong cách Scandinavian tối giản với tông màu xám nhạt, gỗ sáng và cây xanh trang trí. Nội thất đa năng giúp tối ưu diện tích và duy trì sự ngăn nắp, thoáng đãng.',
       en: 'A compact Vista Verde apartment designed in minimalist Scandinavian style with soft grey tones, light wood, and decorative greenery. Multifunctional furniture maximizes space utilization while maintaining a tidy, airy atmosphere.',
-    },
+  },
     client: 'Tư gia',
     scale: '78 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Scandinavian tối giản, nội thất đa năng tối ưu diện tích.', en: 'Minimalist Scandinavian with multifunctional furniture maximizing space.' },
   },
   {
     id: 'wrap-and-roll',
@@ -454,11 +479,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Nhà hàng cuốn Việt Wrap&Roll với mặt tiền mở kính toàn diện, cây xanh trên mái và bảng hiệu xanh lá nhận diện mạnh. Không gian thương mại tươi sáng, hấp dẫn khách đi bộ và phù hợp với nhận diện thương hiệu "Nét riêng cuốn Việt".',
       en: 'Wrap&Roll Vietnamese roll restaurant with a fully open glass facade, rooftop greenery, and striking green signage. The bright commercial space attracts pedestrian traffic and aligns with the brand identity of "Authentic Vietnamese Rolls".',
-    },
+  },
     client: 'Wrap&Roll F&B',
     scale: '220 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Nhà hàng cuốn Việt với mặt tiền kính, nhận diện thương hiệu mạnh mẽ.', en: 'Vietnamese roll restaurant with glass facade and strong brand identity.' },
   },
   {
     id: 'acqua-villa',
@@ -472,10 +498,11 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Biệt thự Acqua tọa lạc trên đồi cao nhìn ra cảng biển Đà Nẵng với bể bơi vô cực và kiến trúc hiện đại. Hệ mái phẳng đặc trưng kết hợp vật liệu bê tông và kính trong suốt tạo nên không gian sống sang trọng hướng biển.',
       en: 'Acqua Villa is perched on a hillside overlooking Da Nang harbor with an infinity pool and contemporary architecture. The distinctive flat roof system combined with concrete and transparent glass creates a luxurious sea-facing living space.',
-    },
+  },
     client: 'Tư gia',
     scale: '650 m²',
     services: { vi: 'Thiết kế Kiến trúc & Nội thất', en: 'Architecture & Interior Design' },
+    tagline: { vi: 'Biệt thự trên đồi hướng biển với bể bơi vô cực và kiến trúc hiện đại.', en: 'Hillside sea-facing villa with infinity pool and contemporary architecture.' },
   },
   {
     id: 'the-flemington-apartment',
@@ -489,11 +516,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Căn hộ tại The Flemington với phong cách Transitional pha trộn giữa cổ điển và đương đại. Ghế sofa góc lớn màu xám xanh, tranh nghệ thuật hội họa và ánh đèn ấm tạo nên không gian vừa tinh tế vừa thoải mái cho gia đình.',
       en: 'An apartment at The Flemington with a Transitional style blending classic and contemporary elements. A large blue-grey sectional sofa, painterly artwork, and warm lighting create a space that is both refined and comfortable for families.',
-    },
+  },
     client: 'Tư gia',
     scale: '110 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Transitional pha trộn cổ điển và đương đại — tinh tế mà thoải mái.', en: 'Transitional blend of classic and contemporary — refined yet comfortable.' },
   },
   {
     id: 'pepper-house',
@@ -507,10 +535,11 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Trụ sở thương hiệu Pepper Builders & Makers — không gian văn phòng mở thể hiện triết lý thiết kế của chính công ty. Nội thất tối giản, vật liệu thô mộc kết hợp ánh sáng tự nhiên, là nơi nuôi dưỡng sáng tạo của đội ngũ.',
       en: "The Pepper Builders & Makers brand headquarters — an open-plan office space that embodies the company's own design philosophy. Minimalist interiors, raw materials combined with natural light, the creative nurturing ground for the team.",
-    },
+  },
     client: 'Pepper Builders & Makers',
     scale: '600 m²',
     services: { vi: 'Thiết kế & Thi công', en: 'Design & Build' },
+    tagline: { vi: 'Urban work-stay model dành cho khách lưu trú đô thị.', en: 'Urban work-stay model for city-based guests.' },
   },
   {
     id: 'tandoor-restaurant',
@@ -524,11 +553,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Nhà hàng Ấn Độ Tandoor với mặt tiền ấn tượng — mái vòm hoa văn cắt laser, đèn neon "Tandoor" và ánh sáng đêm rực rỡ. Thiết kế biến mặt đường Hồ Huấn Nghiệp thành điểm check-in ẩm thực Ấn Độ nổi tiếng tại Sài Gòn.',
       en: "Tandoor Indian restaurant with a striking facade — laser-cut patterned arches, 'Tandoor' neon signage, and dazzling evening lights. The design transforms Ho Huan Nghiep street into Saigon's most iconic Indian dining destination.",
-    },
+  },
     client: 'Tandoor F&B',
     scale: '350 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Mặt tiền ấn tượng biến phố thành điểm đến ẩm thực Ấn Độ biểu tượng.', en: 'Striking facade transforming a street into an iconic Indian dining destination.' },
   },
   {
     id: 'rivera-cove-villa',
@@ -542,10 +572,11 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Biệt thự nghỉ dưỡng tại Bình Thuận mở hoàn toàn ra khu vườn nhiệt đới qua cửa trượt kính lớn. Mái che bằng gạch lưới đan xen tạo bóng râm dịu mát và ánh sáng kẻ sọc đặc trưng, biến phòng ngủ thành một bức tranh thiên nhiên sống động.',
       en: 'A resort villa in Binh Thuan that fully opens to a tropical garden through large sliding glass doors. A latticed brick pergola creates gentle shade and characteristic striped light, transforming the bedroom into a vivid living nature painting.',
-    },
+  },
     client: 'Tư gia',
     scale: '480 m²',
     services: { vi: 'Thiết kế Kiến trúc & Nội thất', en: 'Architecture & Interior Design' },
+    tagline: { vi: 'Biệt thự nghỉ dưỡng mở ra vườn nhiệt đới với ánh sáng kẻ sọc đặc trưng.', en: 'Resort villa opening to tropical gardens with characteristic striped light.' },
   },
   {
     id: 'banian-tree-restaurant',
@@ -559,11 +590,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Nhà hàng Banian Tree Vietnamese Cuisine với mặt tiền cây xanh leo phủ kín và biển hiệu trắng thanh lịch. Thiết kế gợi nhớ những nhà hàng ven cây cổ thụ truyền thống, tạo nên sức hút đặc biệt và nhận diện thương hiệu bền vững.',
       en: 'Banian Tree Vietnamese Cuisine restaurant with a vine-covered green facade and elegant white signage. The design evokes traditional restaurants nestled under ancient trees, creating a unique attraction and lasting brand identity.',
-    },
+  },
     client: 'Banian Tree F&B',
     scale: '400 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Nhà hàng Việt với mặt tiền cây xanh leo, nhận diện thương hiệu bền vững.', en: 'Vietnamese restaurant with vine-covered facade and lasting brand identity.' },
   },
   {
     id: 'chiisana-hashi-restaurant',
@@ -577,11 +609,12 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Nhà hàng Nhật Chiisana Hashi ("Cây cầu nhỏ") với quầy bar sushi được chiếu sáng ấm áp, tường đá thô và bức tranh hoa mai phong cách truyền thống. Không gian ẩm thực Nhật Bản chính thống, tinh tế và đậm chất nghệ thuật.',
       en: 'Chiisana Hashi ("Little Bridge") Japanese restaurant features a warmly lit sushi bar counter, rough stone walls, and traditional plum blossom artwork. An authentic, sophisticated, and artfully Japanese dining environment.',
-    },
+  },
     client: 'Chiisana Hashi F&B',
     scale: '320 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Ẩm thực Nhật chính thống — quầy sushi ấm áp, đá thô và nghệ thuật truyền thống.', en: 'Authentic Japanese dining — warm sushi bar, rough stone and traditional art.' },
   },
   {
     id: 'elgaucho-steak-house',
@@ -595,10 +628,11 @@ export const allProjects: Project[] = [
     description: {
       vi: 'Nhà hàng bít tết Elgaucho phong cách Argentina với không khí trang trại đồng quê — gỗ thô, da thuộc, đèn treo thừng và tường gạch nung. Thiết kế tái hiện văn hóa gaucho trên thảo nguyên Patagonia giữa lòng Sài Gòn.',
       en: 'Elgaucho Argentine steakhouse with a rural ranch atmosphere — rough timber, leather upholstery, rope-hung pendant lights, and fired brick walls. The design recreates gaucho culture on the Patagonian plains in the heart of Saigon.',
-    },
+  },
     client: 'Elgaucho F&B',
     scale: '280 m²',
     services: { vi: 'Thiết kế & Thi công Nội thất', en: 'Interior Design & Build' },
     partner: 'Design by O9',
+    tagline: { vi: 'Bít tết Argentina phong cách đồng quê Patagonia giữa lòng Sài Gòn.', en: 'Argentine steakhouse with Patagonian ranch atmosphere in the heart of Saigon.' },
   },
 ];

@@ -238,9 +238,11 @@ export default function HomeContent() {
                           <span className="text-xs text-neutral-500">
                             {language === 'VI' ? project.location.vi : project.location.en} · {project.year}
                           </span>
-                          <p className="text-sm text-[#555555] mt-2 leading-relaxed line-clamp-2">
-                            {language === 'VI' ? project.description.vi : project.description.en}
-                          </p>
+                          {project.tagline && (
+                            <p className="text-sm text-[#555555] mt-2 leading-relaxed line-clamp-2">
+                              {language === 'VI' ? project.tagline.vi : project.tagline.en}
+                            </p>
+                          )}
                         </div>
                         <div className="w-10 h-10 border border-[#E0E0E0] flex items-center justify-center shrink-0 mt-1 group-hover:border-[#111111] group-hover:bg-[#111111] group-hover:text-white transition-all">
                           <ArrowRight size={16} />
