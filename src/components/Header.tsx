@@ -61,7 +61,9 @@ export function Header() {
           <ImageWithFallback
             src={typeof logoImg === 'string' ? logoImg : logoImg.src}
             alt="Pepper Builders & Makers"
-            className={`w-auto object-contain transition-all duration-500 ease-out h-14 md:h-14 ${
+            className={`w-auto object-contain transition-all duration-500 ease-out ${
+              isTransparent ? "h-20 md:h-20" : "h-14 md:h-14"
+            } ${
               isMobileMenuOpen || isTransparent ? "brightness-0 invert" : ""
             }`}
           />
