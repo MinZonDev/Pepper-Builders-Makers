@@ -8,7 +8,6 @@ import { motion, AnimatePresence } from "motion/react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import logoImg from "@/app/logo.svg";
-import logoCompactImg from "@/app/logo-compact.svg";
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,19 +61,8 @@ export function Header() {
           <ImageWithFallback
             src={typeof logoImg === 'string' ? logoImg : logoImg.src}
             alt="Pepper Builders & Makers"
-            className={`w-auto object-contain transition-all duration-500 ease-out ${
+            className={`w-auto object-contain transition-all duration-500 ease-out h-14 md:h-14 ${
               isMobileMenuOpen || isTransparent ? "brightness-0 invert" : ""
-            } ${
-              isHomePage && !isScrolled ? "h-14 md:h-20 opacity-100 visible" : "h-14 md:h-20 opacity-0 invisible absolute"
-            }`}
-          />
-          <ImageWithFallback
-            src={typeof logoCompactImg === 'string' ? logoCompactImg : logoCompactImg.src}
-            alt="Pepper Builders & Makers"
-            className={`w-auto object-contain transition-all duration-500 ease-out ${
-              isMobileMenuOpen ? "brightness-0 invert" : ""
-            } ${
-              isHomePage && !isScrolled ? "h-8 md:h-10 opacity-0 invisible absolute" : "h-8 md:h-10 opacity-100 visible"
             }`}
           />
         </Link>
@@ -89,8 +77,8 @@ export function Header() {
                   key={link.name}
                   href={link.path}
                   className={`text-sm tracking-wide transition-colors ${
-                    isActive 
-                      ? (isTransparent ? "text-white font-semibold" : "text-black font-semibold") 
+                    isActive
+                      ? (isTransparent ? "text-white font-semibold" : "text-black font-semibold")
                       : (isTransparent ? "text-white/80 hover:text-white" : "text-neutral-500 hover:text-black")
                   }`}
                 >
@@ -99,7 +87,7 @@ export function Header() {
               );
             })}
           </nav>
-          
+
           <div className={`flex items-center gap-6 border-l pl-8 ${isTransparent ? "border-white/30" : "border-neutral-200"}`}>
             {/* Lang Switcher */}
             <div className={`flex items-center gap-2 text-sm ${isTransparent ? "text-white/80" : "text-neutral-500"}`}>

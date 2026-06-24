@@ -18,9 +18,7 @@ export function Blog() {
   return (
     <div className="pt-32 min-h-screen">
       <div className="container mx-auto px-6 md:px-12 py-16">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-black transition-colors mb-12">
-          <ArrowLeft size={16} /> {language === 'VI' ? 'Trang chủ' : 'Home'}
-        </Link>
+
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 uppercase">
           {t.title}
         </h1>

@@ -24,10 +24,10 @@ export function Contact() {
   };
 
   const t = {
-    title: language === 'VI' ? "Sẵn sàng cho dự án tiếp theo?" : "Ready for your next project?",
-    desc: language === 'VI' 
-      ? "Liên hệ với Pepper Builders & Makers để được tư vấn miễn phí về dự án của bạn. Chúng tôi cam kết phản hồi trong vòng 24 giờ làm việc."
-      : "Contact Pepper Builders & Makers for a free consultation on your project. We commit to responding within 24 business hours.",
+    title: language === 'VI' ? "TRAO ĐỔI VỀ DỰ ÁN CỦA BẠN" : "LET'S TALK ABOUT YOUR PROJECT",
+    desc: language === 'VI'
+      ? "Mỗi dự án đều có những yêu cầu và điều kiện khác nhau. Hãy chia sẻ một vài thông tin ban đầu để Pepper có thể hiểu rõ hơn về nhu cầu của bạn."
+      : "Every project has different requirements and conditions. Share a few details so Pepper can better understand your needs.",
     hq: language === 'VI' ? "Trụ sở chính" : "Headquarters",
     hqVal: language === 'VI' ? "19 Hoàng Sa, Phường Sài Gòn, TP.HCM" : "19 Hoang Sa, Sai Gon Ward, HCMC",
     hotline: "Hotline",
@@ -39,26 +39,24 @@ export function Contact() {
     thxDesc: language === 'VI' ? "Yêu cầu của bạn đã được gửi thành công. Chúng tôi sẽ liên hệ lại trong thời gian sớm nhất." : "Your request has been sent successfully. We will get back to you as soon as possible.",
     thxBtn: language === 'VI' ? "Gửi yêu cầu khác" : "Send another request",
     fName: language === 'VI' ? "Họ tên *" : "Full Name *",
-    fNameP: language === 'VI' ? "Nguyễn Văn A" : "John Doe",
+    fNameP: "",
     fEmail: "Email *",
     fPhone: language === 'VI' ? "Số điện thoại *" : "Phone Number *",
     fType: language === 'VI' ? "Loại dự án *" : "Project Type *",
     fTypeP: language === 'VI' ? "Chọn loại dự án" : "Select project type",
     types: language === 'VI' ? ['Nhà ở', 'BĐS cho thuê', 'Nhà hàng', 'Khách sạn', 'Văn phòng', 'Khác'] : ['Residential', 'Rental Property', 'Restaurant', 'Hotel', 'Office', 'Other'],
     fBudget: language === 'VI' ? "Ngân sách dự kiến" : "Estimated Budget",
-    fBudgetP: language === 'VI' ? "VD: 5 tỷ" : "Ex: $200k",
+    fBudgetP: "",
     fDesc: language === 'VI' ? "Mô tả nhu cầu *" : "Requirements Description *",
-    fDescP: language === 'VI' ? "Hãy chia sẻ thêm về dự án của bạn..." : "Tell us more about your project...",
+    fDescP: "",
     btnSending: language === 'VI' ? "Đang gửi..." : "Sending...",
-    btnSubmit: language === 'VI' ? "Gửi thông tin" : "Submit Info",
+    btnSubmit: language === 'VI' ? "Gửi thông tin" : "Send Request",
   };
 
   return (
     <div className="pt-32 min-h-screen bg-white">
       <div className="container mx-auto px-6 md:px-12 py-16">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-black transition-colors mb-12">
-          <ArrowLeft size={16} /> {language === 'VI' ? 'Trang chủ' : 'Home'}
-        </Link>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           
           {/* Info Section */}
@@ -119,18 +117,19 @@ export function Contact() {
               </a>
             </div>
 
-            <div className="w-full h-64">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7838.50920156732!2d106.70213547480522!3d10.791801889357934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f2b563e9d89%3A0x6ba743f57bd0b957!2sPepper%20House!5e0!3m2!1sen!2s!4v1781447618535!5m2!1sen!2s"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Pepper House Location"
+            <a
+              href="https://maps.google.com/maps?q=Pepper+House+19+Hoang+Sa+Ho+Chi+Minh+City"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full h-64 overflow-hidden border border-neutral-200 group"
+              aria-label="Xem trên Google Maps"
+            >
+              <ImageWithFallback
+                src="/map.png"
+                alt="Pepper Builders & Makers — 19 Hoàng Sa, TP.HCM"
+                className="w-full h-full object-cover group-hover:opacity-90 transition-opacity"
               />
-            </div>
+            </a>
           </div>
 
           {/* Form Section */}
@@ -160,11 +159,11 @@ export function Contact() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-neutral-700 mb-2">{t.fEmail}</label>
-                    <input type="email" id="email" required className="w-full px-4 py-3 bg-white border border-neutral-200 focus:border-black focus:outline-none transition-colors" placeholder="email@example.com" />
+                    <input type="email" id="email" required className="w-full px-4 py-3 bg-white border border-neutral-200 focus:border-black focus:outline-none transition-colors" />
                   </div>
                   <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-neutral-700 mb-2">{t.fPhone}</label>
-                    <input type="tel" id="phone" required className="w-full px-4 py-3 bg-white border border-neutral-200 focus:border-black focus:outline-none transition-colors" placeholder="090 123 4567" />
+                    <input type="tel" id="phone" required className="w-full px-4 py-3 bg-white border border-neutral-200 focus:border-black focus:outline-none transition-colors" />
                   </div>
                 </div>
 

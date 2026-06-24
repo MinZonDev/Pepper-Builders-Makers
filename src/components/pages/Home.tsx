@@ -29,14 +29,14 @@ export default function HomeContent() {
   }, []);
 
   const t = {
-    heroSubtitle: language === 'VI' ? "Dịch vụ thiết kế & thi công toàn diện cho nhà ở, không gian lưu trú, thương mại và bất động sản khai thác." : "Comprehensive design & build for homes, hospitality, commercial spaces and investment properties.",
-    heroSlogan: language === 'VI' ? "Kiến tạo không gian.\nTạo lập giá trị." : "Create Spaces.\nCreate Value.",
+    heroSubtitle: language === 'VI' ? "Cung cấp giải pháp thiết kế và thi công toàn diện cho công trình lưu trú, bất động sản khai thác cho thuê, nhà ở cá nhân hóa và không gian thương mại" : "Comprehensive design & build for homes, hospitality, commercial spaces and investment properties.",
+    heroSlogan: language === 'VI' ? "Kiến tạo không gian\nTạo lập giá trị" : "Create Spaces\nCreate Value",
     heroBtn: language === 'VI' ? "NHẬN TƯ VẤN DỰ ÁN" : "GET PROJECT CONSULTATION",
     srvTitle: language === 'VI' ? "Dịch vụ nổi bật" : "Featured Services",
-    srvDesc1: language === 'VI' ? "Khách sạn, Nhà hàng, Quán café, Bar, Resort với tiêu chuẩn thẩm mỹ và công năng vượt trội." : "Hotels, Restaurants, Cafes, Bars, Resorts with outstanding aesthetic and functional standards.",
-    srvDesc2: language === 'VI' ? "Nhà phố, Biệt thự, Căn hộ cao cấp. Mang đậm dấu ấn cá nhân và phong cách sống." : "Townhouses, Villas, Premium Apartments. Deeply imbued with personal marks and lifestyles.",
-    srvDesc3: language === 'VI' ? "Văn phòng, Showroom, Retail, BĐS cho thuê. Tối ưu diện tích và trải nghiệm thương hiệu." : "Offices, Showrooms, Retail, Rental Properties. Optimizing space and brand experience.",
-    readMore: language === 'VI' ? "Xem thêm" : "Read more",
+    srvDesc1: language === 'VI' ? "Resort, Khách sạn, căn hộ dịch vụ, homestay và bất động sản cho thuê — thiết kế để dễ vận hành, khai thác hiệu quả và tạo trải nghiệm lưu trú rõ ràng." : "Resorts, Hotels, Serviced Apartments, Homestays and Rental Properties — designed for efficient operations, effective yield, and a clear guest experience.",
+    srvDesc2: language === 'VI' ? "Nhà phố, biệt thự, căn hộ và second home — thiết kế quanh cách sống thật của gia chủ, bền vững trong sử dụng và giữ giá trị theo thời gian." : "Townhouses, Villas, Apartments and Second Homes — designed around how the owner actually lives, durable in use, and built to retain value over time.",
+    srvDesc3: language === 'VI' ? "Nhà hàng và cửa hàng bán lẻ — tổ chức không gian phục vụ vận hành, luồng khách và trải nghiệm thương hiệu." : "Restaurants and Retail Stores — spaces organized around operations, customer flow, and brand experience.",
+    readMore: language === 'VI' ? "Xem dự án" : "View projects",
     projTitle: language === 'VI' ? "Dự án tiêu biểu" : "Featured Projects",
     projAll: language === 'VI' ? "Xem tất cả dự án" : "View all projects",
     projDetail: language === 'VI' ? "Xem chi tiết" : "View details",
@@ -45,21 +45,20 @@ export default function HomeContent() {
     stat3: language === 'VI' ? "Khách hài lòng" : "Happy Clients",
     stat4: language === 'VI' ? "Đúng tiến độ" : "On-time",
     whyTitle: language === 'VI' ? "Tại sao chọn Pepper?" : "Why choose Pepper?",
-    whyP1Title: language === 'VI' ? "Thiết kế" : "Design",
-    whyP1Desc: language === 'VI' ? "Sáng tạo, tối ưu công năng và đậm dấu ấn." : "Creative, functionally optimized, and signature.",
-    whyP2Title: language === 'VI' ? "Thi công" : "Construction",
-    whyP2Desc: language === 'VI' ? "Đội ngũ lành nghề, kỹ thuật thi công sắc nét." : "Skilled team, sharp construction techniques.",
-    whyP3Title: language === 'VI' ? "Quản lý" : "Management",
-    whyP3Desc: language === 'VI' ? "Giám sát tiến độ và chất lượng nghiêm ngặt." : "Strict progress and quality supervision.",
-    whyP4Title: language === 'VI' ? "Vận hành" : "Operation",
-    whyP4Desc: language === 'VI' ? "Hỗ trợ bảo trì, đảm bảo công trình bền vững." : "Maintenance support, ensuring durable works.",
-    processShort1: language === 'VI' ? "Tư vấn & Đánh giá" : "Consult & Assess",
-    processShort2: language === 'VI' ? "Thiết kế & Hợp đồng" : "Design & Contract",
-    processShort3: language === 'VI' ? "Thi công & Bàn giao" : "Build & Handover",
-    processShortLink: language === 'VI' ? "Xem quy trình đầy đủ" : "View full process",
-    ctaTitle: language === 'VI' ? "Bạn có dự án cần thực hiện?" : "Have a project in mind?",
+    whyP1Title: language === 'VI' ? "Kinh nghiệm từ công trình đã đi vào sử dụng thực tế" : "Experience from real-world projects",
+    whyP1Desc: language === 'VI' ? "Pepper không chỉ nhìn công trình ở ngày bàn giao, mà quan tâm đến cách nó được ở, được vận hành và được sử dụng trong nhiều năm." : "We care not just about handover day, but how the building is lived in, operated, and used over many years.",
+    whyP2Title: language === 'VI' ? "Hiểu giá trị từ phía chủ đầu tư" : "Understanding investor value",
+    whyP2Desc: language === 'VI' ? "Mỗi quyết định thiết kế và thi công được cân nhắc theo mục tiêu sử dụng, khai thác và giá trị dài hạn của tài sản." : "Every design and construction decision is weighed against the usage goals, operational needs, and long-term asset value.",
+    whyP3Title: language === 'VI' ? "Trung thực giữa thiết kế và thi công" : "Integrity across design and construction",
+    whyP3Desc: language === 'VI' ? "Điều được thiết kế phải có khả năng được thi công đúng, rõ trách nhiệm và không tạo khoảng cách giữa bản vẽ và thực tế." : "What is designed must be buildable — with clear accountability and no gap between drawings and reality.",
+    whyP4Title: language === 'VI' ? "Đồng hành sau bàn giao" : "Post-handover partnership",
+    whyP4Desc: language === 'VI' ? "Một công trình còn tiếp tục sống sau khi hoàn thiện. Pepper giữ vai trò đồng hành khi công trình đi vào sử dụng hoặc khai thác thực tế." : "A building continues to live after completion. Pepper stays involved as the project enters real use or operation.",
+    srvTitle1: language === 'VI' ? "Công trình lưu trú & khai thác cho thuê" : "Rental & Hospitality Properties",
+    srvTitle2: language === 'VI' ? "Nhà ở cá nhân hóa" : "Personalized Homes",
+    srvTitle3: language === 'VI' ? "Không gian thương mại" : "Commercial Spaces",
+    ctaTitle: language === 'VI' ? "Cùng trao đổi về\ndự án của bạn" : "Have a project\nin mind?",
     ctaBtn1: language === 'VI' ? "Liên hệ ngay" : "Contact us now",
-    ctaBtn2: language === 'VI' ? "Xem các công trình" : "View our works",
+    ctaBtn2: language === 'VI' ? "Xem các công trình" : "View our projects",
   };
 
   return (
@@ -88,7 +87,7 @@ export default function HomeContent() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-sm md:text-base font-sans font-light mb-8 opacity-80 max-w-2xl mx-auto leading-relaxed"
+            className="text-sm md:text-base font-sans font-light mb-3 opacity-80 max-w-2xl mx-auto leading-relaxed"
           >
             {t.heroSubtitle}
           </motion.h1>
@@ -120,19 +119,19 @@ export default function HomeContent() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
           {[
             {
-              title: "Rental & Hospitality Properties",
+              title: t.srvTitle1,
               desc: t.srvDesc1,
               icon: <BedDouble size={24} className="mb-8 stroke-1" />,
               link: "/services#Hospitality"
             },
             {
-              title: "Personalized Homes",
+              title: t.srvTitle2,
               desc: t.srvDesc2,
               icon: <House size={24} className="mb-8 stroke-1" />,
               link: "/services#Residential"
             },
             {
-              title: "Commercial Spaces",
+              title: t.srvTitle3,
               desc: t.srvDesc3,
               icon: <Store size={24} className="mb-8 stroke-1" />,
               link: "/services#Commercial"
@@ -148,29 +147,6 @@ export default function HomeContent() {
             </div>
           ))}
         </div>
-      </section>
-
-      {/* Section 6 - Quy trình rút gọn */}
-      <section className="pb-24 pt-0 container mx-auto px-6 md:px-12 text-center">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm md:text-base font-medium text-[#555555] mb-8">
-          <span className="flex items-center gap-2">
-            <span className="w-6 h-6 border border-[#111111] text-[#111111] flex items-center justify-center text-xs">1</span>
-            {t.processShort1}
-          </span>
-          <ArrowRight size={16} className="hidden md:block opacity-30" />
-          <span className="flex items-center gap-2">
-            <span className="w-6 h-6 border border-[#111111] text-[#111111] flex items-center justify-center text-xs">2</span>
-            {t.processShort2}
-          </span>
-          <ArrowRight size={16} className="hidden md:block opacity-30" />
-          <span className="flex items-center gap-2">
-            <span className="w-6 h-6 border border-[#111111] text-[#111111] flex items-center justify-center text-xs">3</span>
-            {t.processShort3}
-          </span>
-        </div>
-        <Link href="/about" className="inline-flex items-center gap-2 text-sm font-bold hover:underline underline-offset-4">
-          {t.processShortLink} <ArrowRight size={16} />
-        </Link>
       </section>
 
       {/* Section 3 - Dự án tiêu biểu (Filterable Grid 2x2) */}
@@ -313,7 +289,7 @@ export default function HomeContent() {
       {/* Section 7 - CTA */}
       <section className="bg-[#F7F7F7] border-t border-[#E0E0E0] py-32 px-6">
         <div className="container mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <h2 className="text-3xl md:text-5xl font-mono tracking-tight leading-tight max-w-xl">{t.ctaTitle}</h2>
+          <h2 className="text-3xl md:text-5xl font-mono tracking-tight leading-tight max-w-xl whitespace-pre-line">{t.ctaTitle}</h2>
           <div className="flex flex-col sm:flex-row lg:justify-end gap-4">
             <Link 
               href="/contact" 
@@ -321,8 +297,8 @@ export default function HomeContent() {
             >
               {t.ctaBtn1}
             </Link>
-            <Link 
-              href="/projects" 
+            <Link
+              href="/projects"
               className="inline-flex justify-center bg-white border border-[#E0E0E0] text-[#111111] rounded-none px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-[#F7F7F7] transition-colors"
             >
               {t.ctaBtn2}

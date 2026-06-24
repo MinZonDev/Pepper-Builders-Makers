@@ -17,7 +17,10 @@
       "mcp__plugin_figma_figma__get_design_context",
       "Bash(curl -s -o /tmp/vi_section.png \"https://www.figma.com/api/mcp/asset/8916a30a-06cd-4ded-9bc0-6ec139c2a2d8\")",
       "Bash(curl -s -o /tmp/en_section.png \"https://www.figma.com/api/mcp/asset/257ce6b7-d83e-4ff3-b285-976d1241243a\")",
-      "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/8916a30a-06cd-4ded-9bc0-6ec139c2a2d8\" -OutFile \"$env:TEMP\\\\vi_section.png\"; Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/257ce6b7-d83e-4ff3-b285-976d1241243a\" -OutFile \"$env:TEMP\\\\en_section.png\"; echo \"Done\")"
+      "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/8916a30a-06cd-4ded-9bc0-6ec139c2a2d8\" -OutFile \"$env:TEMP\\\\vi_section.png\"; Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/257ce6b7-d83e-4ff3-b285-976d1241243a\" -OutFile \"$env:TEMP\\\\en_section.png\"; echo \"Done\")",
+      "Bash(python -c ' *)",
+      "Bash(python -c \"import sys; data=sys.stdin.buffer.read\\(\\); print\\(data.decode\\('utf-8', errors='replace'\\)\\)\")",
+      "Bash(npx tsc *)"
     ]
   }
 }

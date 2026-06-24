@@ -20,7 +20,7 @@ export function Footer() {
     ],
     servicesTitle: language === 'VI' ? 'DỊCH VỤ' : 'SERVICES',
     servicesLinks: [
-      { name: language === 'VI' ? 'Cho thuê & Lưu trú' : 'Rental & Hospitality', path: '/services' },
+      { name: language === 'VI' ? 'Công trình lưu trú & khai thác cho thuê' : 'Rental & Hospitality', path: '/services' },
       { name: language === 'VI' ? 'Nhà ở Cá nhân hóa' : 'Personalized Homes', path: '/services' },
       { name: language === 'VI' ? 'Không gian Thương mại' : 'Commercial Spaces', path: '/services' },
     ],
@@ -29,7 +29,6 @@ export function Footer() {
     phone: '(+84) 931 888 149',
     email: 'info@pepper.builders',
     copyright: language === 'VI' ? '© 2026 Pepper Builders & Makers. Bảo lưu mọi quyền.' : '© 2026 Pepper Builders & Makers. All rights reserved.',
-    design: language === 'VI' ? 'Thiết kế & Thi công trọn gói.' : 'Design & Build.'
   };
 
   return (
@@ -94,7 +93,6 @@ export function Footer() {
         {/* Footer Bottom */}
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-neutral-800/80 pt-8 mt-12 relative">
           <p className="text-xs text-neutral-500">{t.copyright}</p>
-          <p className="text-xs text-neutral-500 mt-4 md:mt-0">{t.design}</p>
         </div>
       </div>
     </footer>

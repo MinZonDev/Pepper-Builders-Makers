@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Hexagon, Square, Triangle, Circle } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { motion } from "motion/react";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -10,56 +10,45 @@ export function About() {
   const { language } = useLanguage();
 
   const t = {
-    heroTitle1: language === 'VI' ? "Kiến tạo không gian." : "Create Spaces.",
-    heroTitle2: language === 'VI' ? "Gia tăng giá trị." : "Create Value.",
-    introQuote: language === 'VI' 
-      ? "Sự hoàn mỹ không đến từ những điều lớn lao, mà từ sự tận tâm trong từng chi tiết nhỏ nhất." 
-      : "Perfection does not come from grand things, but from dedication to the smallest details.",
-    introP1: language === 'VI' 
-      ? "Thành lập từ năm 2010, Pepper Builders & Makers bắt đầu với một triết lý đơn giản: Xây dựng không chỉ là gạch vữa, mà là kiến tạo trải nghiệm sống. Chúng tôi là tập hợp của những kiến trúc sư, kỹ sư và những người thợ thủ công đam mê cái đẹp." 
+    heroTitle1: language === 'VI' ? "Về chúng tôi" : "About Us",
+    heroTitle2: language === 'VI' ? "" : "",
+    introNew: language === 'VI'
+      ? "Pepper là một tổ chức thiết kế và thi công được xây dựng xoay quanh một cách làm việc nhất quán.\n\nChúng tôi tin rằng những quyết định tốt không chỉ dựa trên thiết kế hay thi công riêng lẻ, mà cần được nhìn như một phần của toàn bộ quá trình sử dụng và vận hành công trình sau này."
+      : "Pepper is a design-build firm defined by a consistent methodology.\n\nWe believe that good decisions are not driven by design or construction in isolation — they must be understood as part of how a building will be used and operated over its lifetime.",
+    introP1: language === 'VI'
+      ? "Thành lập từ năm 2010, Pepper Builders & Makers bắt đầu với một triết lý đơn giản: Xây dựng không chỉ là gạch vữa, mà là kiến tạo trải nghiệm sống. Chúng tôi là tập hợp của những kiến trúc sư, kỹ sư và những người thợ thủ công đam mê cái đẹp."
       : "Founded in 2010, Pepper Builders & Makers started with a simple philosophy: Construction is not just about bricks and mortar, but creating living experiences. We are a collective of architects, engineers, and craftsmen passionate about beauty.",
-    introP2: language === 'VI' 
-      ? "Với mô hình Design & Build trọn gói, chúng tôi kiểm soát chất lượng khắt khe từ nét vẽ đầu tiên đến khi bàn giao chìa khóa, đảm bảo mỗi không gian đều mang đậm dấu ấn cá nhân của gia chủ và tối ưu hóa công năng vận hành." 
+    introP2: language === 'VI'
+      ? "Với mô hình Design & Build trọn gói, chúng tôi kiểm soát chất lượng khắt khe từ nét vẽ đầu tiên đến khi bàn giao chìa khóa, đảm bảo mỗi không gian đều mang đậm dấu ấn cá nhân của gia chủ và tối ưu hóa công năng vận hành."
       : "With a turnkey Design & Build model, we strictly control quality from the first stroke to handing over the keys, ensuring each space bears the personal mark of the owner and optimizes operational functionality.",
-    stats: [
-      { num: "15+", label: language === 'VI' ? "Năm kinh nghiệm" : "Years Experience" },
-      { num: "0", label: language === 'VI' ? "Phát sinh chi phí" : "Hidden Costs" },
-      { num: "100%", label: language === 'VI' ? "Đúng tiến độ" : "On-time Completion" },
-      { num: "100%", label: language === 'VI' ? "Cam kết chất lượng" : "Quality Guarantee" },
-    ],
-    valuesTitle: language === 'VI' ? "Giá trị cốt lõi" : "Core Values",
-    values: [
-      { 
-        icon: <Hexagon size={24} className="mb-6 stroke-1 text-neutral-400" />,
-        title: language === 'VI' ? "Tinh Tế" : "Refinement", 
-        desc: language === 'VI' ? "Mọi đường nét, vật liệu đều được lựa chọn và thi công với độ chính xác cao nhất." : "Every line and material is selected and executed with the highest precision." 
+    methodTitle: language === 'VI' ? "PHƯƠNG PHÁP LÀM VIỆC CỦA PEPPER" : "PEPPER'S WORKING METHODOLOGY",
+    methods: [
+      {
+        num: "01",
+        title: language === 'VI' ? "Bắt đầu từ cách công trình sẽ được sử dụng" : "Start from how the building will be used",
+        desc: language === 'VI' ? "Mỗi quyết định đều được xem xét từ góc nhìn của người sẽ sở hữu, vận hành hoặc sử dụng công trình trong thực tế." : "Every decision is examined from the perspective of those who will own, operate, or use the building in practice."
       },
-      { 
-        icon: <Triangle size={24} className="mb-6 stroke-1 text-neutral-400" />,
-        title: language === 'VI' ? "Sáng Tạo" : "Innovation", 
-        desc: language === 'VI' ? "Không ngừng cập nhật xu hướng và công nghệ mới để mang lại giải pháp đột phá." : "Constantly updating trends and new technologies to bring breakthrough solutions." 
+      {
+        num: "02",
+        title: language === 'VI' ? "Thiết kế và thi công được phát triển cùng nhau" : "Design and construction developed in parallel",
+        desc: language === 'VI' ? "Các giải pháp được kiểm chứng liên tục giữa ý tưởng, vật liệu, ngân sách và khả năng triển khai thực tế." : "Solutions are continuously cross-checked against ideas, materials, budget, and real-world feasibility."
       },
-      { 
-        icon: <Circle size={24} className="mb-6 stroke-1 text-neutral-400" />,
-        title: language === 'VI' ? "Bền Vững" : "Sustainability", 
-        desc: language === 'VI' ? "Ưu tiên vật liệu thân thiện môi trường và thiết kế tối ưu hóa năng lượng tự nhiên." : "Prioritizing eco-friendly materials and designs that optimize natural energy." 
+      {
+        num: "03",
+        title: language === 'VI' ? "Ưu tiên giá trị sử dụng dài hạn" : "Prioritize long-term operational value",
+        desc: language === 'VI' ? "Chúng tôi quan tâm đến cách công trình vận hành sau khi hoàn thành, không chỉ thời điểm bàn giao." : "We care about how the building operates after completion, not just the handover moment."
       },
-      { 
-        icon: <Square size={24} className="mb-6 stroke-1 text-neutral-400" />,
-        title: language === 'VI' ? "Tận Tâm" : "Dedication", 
-        desc: language === 'VI' ? "Đồng hành cùng khách hàng như xây dựng chính ngôi nhà của mình." : "Accompanying clients as if building our own home." 
+      {
+        num: "04",
+        title: language === 'VI' ? "Mỗi quyết định đều có lý do" : "Every decision has a reason",
+        desc: language === 'VI' ? "Chúng tôi không theo đuổi các giải pháp chỉ vì xu hướng hay hình thức. Mỗi lựa chọn về bố trí, vật liệu hay chi phí đầu tư đều cần phục vụ một mục tiêu sử dụng cụ thể của công trình." : "We do not pursue solutions merely because of trends or aesthetics. Every choice of layout, material, or budget allocation must serve a specific functional purpose within the project."
       },
     ],
-    processTitle: language === 'VI' ? "Quy trình làm việc" : "How we work",
-    process: [
-      { num: "01", title: language === 'VI' ? "Tiếp nhận & đánh giá dự án" : "Project Intake & Assessment", desc: language === 'VI' ? "Ghi nhận thông tin dự án, mục tiêu và kỳ vọng. Phân tích tính khả thi, quy mô và ngân sách dự kiến." : "Record project information, goals, and expectations. Analyze feasibility, scale, and estimated budget." },
-      { num: "02", title: language === 'VI' ? "Tư vấn và thống nhất phương án" : "Consulting & Concept Agreement", desc: language === 'VI' ? "Thảo luận trực tiếp, làm rõ yêu cầu và thống nhất hướng tiếp cận thiết kế phù hợp nhất." : "Direct discussion, clarify requirements and agree on the most suitable design approach." },
-      { num: "03", title: language === 'VI' ? "Khái toán ngân sách và hợp đồng" : "Budget Estimate & Contract", desc: language === 'VI' ? "Khái toán chi phí chi tiết, minh bạch theo từng hạng mục. Ký kết hợp đồng rõ ràng, không phát sinh." : "Detailed, transparent cost estimate by line item. Clear contract signing with no hidden costs." },
-      { num: "04", title: language === 'VI' ? "Thiết kế & lên kế hoạch thi công" : "Design & Construction Planning", desc: language === 'VI' ? "Phát triển hồ sơ kiến trúc, bản vẽ kỹ thuật, phối cảnh 3D và lên tiến độ thi công chi tiết." : "Develop architectural documents, technical drawings, 3D renderings, and detailed construction schedule." },
-      { num: "05", title: language === 'VI' ? "Thi công & quản lý chất lượng" : "Construction & Quality Management", desc: language === 'VI' ? "Triển khai công trình với kiểm soát chặt chẽ Chất lượng – Chi phí – Tiến độ tại công trường." : "Execute construction with strict on-site control of Quality, Cost, and Schedule." },
-      { num: "06", title: language === 'VI' ? "Hoàn thành & bàn giao" : "Completion & Handover", desc: language === 'VI' ? "Nghiệm thu, tất toán toàn bộ chi phí, bàn giao hồ sơ hoàn công và bảo hành dự án." : "Acceptance, settle all costs, handover as-built documents and project warranty." },
-    ],
-    ctaTitle: language === 'VI' ? "Cùng kiến tạo không gian tiếp theo của bạn." : "Let's build your next space together.",
+    expTitle: language === 'VI' ? "KINH NGHIỆM ĐƯỢC HÌNH THÀNH TỪ THỰC TẾ" : "EXPERIENCE SHAPED BY PRACTICE",
+    expContent: language === 'VI'
+      ? "Kinh nghiệm thiết kế, thi công và trực tiếp tham gia vào quá trình vận hành công trình giúp Pepper hiểu rõ hơn mối liên hệ giữa ý tưởng, triển khai và sử dụng thực tế. Thay vì xem đây là những giai đoạn tách biệt, chúng tôi tiếp cận chúng như những phần liên kết chặt chẽ của cùng một quá trình. Điều này giúp các quyết định được đưa ra nhất quán hơn từ giai đoạn đầu cho đến khi công trình đi vào sử dụng. Những kinh nghiệm đó được tích hợp thành một cách tiếp cận thống nhất trong mỗi dự án."
+      : "Experience in design, construction, and hands-on involvement in building operations has given Pepper a deeper understanding of the relationship between ideas, execution, and real-world use. Rather than treating these as separate phases, we approach them as closely interconnected parts of a single continuous process. This enables more consistent decision-making from the earliest stage through to when the building is in use. These experiences are brought together into a unified approach in every project.",
+    ctaTitle: language === 'VI' ? "MỖI DỰ ÁN ĐỀU BẮT ĐẦU TỪ NHỮNG CÂU HỎI ĐÚNG!" : "Every project starts with the right questions!",
     ctaBtn: language === 'VI' ? "Khởi tạo dự án" : "Start your project",
   };
 
@@ -69,149 +58,94 @@ export function About() {
   };
 
   return (
-    <div className="pt-32 bg-white">
-      <div className="container mx-auto px-6 md:px-12 mb-8">
-        <Link href="/" className="inline-flex items-center gap-2 text-sm text-neutral-500 hover:text-black transition-colors">
-          <ArrowLeft size={16} /> {language === 'VI' ? 'Trang chủ' : 'Home'}
-        </Link>
-      </div>
+    <div className="bg-white">
 
-      {/* Hero Section */}
-      <section className="container mx-auto px-6 md:px-12 mb-12">
-        <motion.h1
+      {/* Hero — khớp với phần viewport còn lại sau header */}
+      <section className="mt-[var(--header-offset,8rem)] h-[calc(100vh-var(--header-offset,8rem))] flex flex-col lg:flex-row overflow-hidden">
+
+        {/* Left: Image — full height */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] as const }}
+          className="relative w-full lg:w-1/2 min-h-[45vh] lg:min-h-0 lg:h-full overflow-hidden"
+        >
+          <ImageWithFallback
+            src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBsaXZpbmclMjByb29tfGVufDF8fHx8MTc4MTE4Njg1OXww&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Pepper Builders Modern Architecture"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
+
+        {/* Right: Title + Intro — căn giữa dọc */}
+        <motion.div
           initial="hidden"
           animate="visible"
-          variants={{
-            hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { staggerChildren: 0.12 } }
-          }}
-          className="text-4xl md:text-6xl font-mono tracking-tight leading-tight"
+          variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.14 } } }}
+          className="w-full lg:w-1/2 flex items-center px-8 md:px-12 lg:px-16 py-12 lg:py-0"
         >
-          <motion.div variants={fadeInUp} className="block">{t.heroTitle1}</motion.div>
-          <motion.div variants={fadeInUp} className="block text-neutral-500">{t.heroTitle2}</motion.div>
-        </motion.h1>
-      </section>
-
-      {/* Big Hero Image */}
-      <motion.section 
-        initial={{ opacity: 0, scale: 0.95 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] as const }}
-        className="w-full h-[45vh] md:h-[60vh]"
-      >
-        <ImageWithFallback
-          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmUlMjBsaXZpbmclMjByb29tfGVufDF8fHx8MTc4MTE4Njg1OXww&ixlib=rb-4.1.0&q=80&w=1080"
-          alt="Pepper Builders Modern Architecture"
-          className="w-full h-full object-cover"
-        />
-      </motion.section>
-
-      {/* Intro & Philosophy Section */}
-      <section className="py-24 md:py-32 container mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
-          >
-            <h2 className="text-3xl md:text-5xl font-light leading-snug tracking-tight text-black">
-              "{t.introQuote}"
-            </h2>
-          </motion.div>
-          <motion.div 
-            initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={fadeInUp}
-            className="flex flex-col gap-8 text-lg text-neutral-600 font-light leading-relaxed"
-          >
-            <p>{t.introP1}</p>
-            <p>{t.introP2}</p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Stats Divider */}
-      <section className="border-y border-neutral-200 bg-neutral-50">
-        <div className="container mx-auto px-6 md:px-12 py-16 md:py-24">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8">
-            {t.stats.map((stat, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="text-center md:text-left"
-              >
-                <div className="text-5xl md:text-6xl font-bold tracking-tighter mb-4">{stat.num}</div>
-                <div className="text-sm uppercase tracking-widest text-neutral-500 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
+          <div className="max-w-lg">
+            <motion.h1
+              variants={fadeInUp}
+              className="text-4xl md:text-6xl font-mono tracking-tight leading-tight mb-8"
+            >
+              {t.heroTitle1}
+            </motion.h1>
+            <motion.p
+              variants={fadeInUp}
+              className="text-lg md:text-xl text-neutral-600 font-light leading-relaxed whitespace-pre-line"
+            >
+              {t.introNew}
+            </motion.p>
           </div>
-        </div>
+        </motion.div>
+
       </section>
 
-      {/* Core Values */}
+      {/* PHƯƠNG PHÁP LÀM VIỆC CỦA PEPPER */}
       <section className="py-24 md:py-32 container mx-auto px-6 md:px-12">
-        <motion.h2 
+        <motion.h2
           initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-          className="text-sm font-bold tracking-widest uppercase mb-16 text-neutral-400"
+          className="text-3xl md:text-5xl font-bold tracking-tight uppercase mb-16 md:mb-24"
         >
-          {t.valuesTitle}
+          {t.methodTitle}
         </motion.h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-          {t.values.map((val, i) => (
-            <motion.div 
+          {t.methods.map((item, i) => (
+            <motion.div
               key={i}
               initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
               className="group border-t border-neutral-200 pt-8"
             >
-              {val.icon}
-              <h3 className="text-2xl font-bold mb-4 group-hover:translate-x-2 transition-transform duration-300">{val.title}</h3>
-              <p className="text-neutral-500 leading-relaxed max-w-sm">{val.desc}</p>
+              <span className="text-sm font-mono text-neutral-400 mb-4 block">{item.num}</span>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:translate-x-2 transition-transform duration-300">{item.title}</h3>
+              <p className="text-neutral-500 leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* Process (Sticky Layout) */}
+      {/* KINH NGHIỆM ĐƯỢC HÌNH THÀNH TỪ THỰC TẾ */}
       <section className="py-24 md:py-32 bg-black text-white">
         <div className="container mx-auto px-6 md:px-12">
-          <div className="flex flex-col lg:flex-row gap-16 lg:gap-32">
-            
-            {/* Sticky Header */}
-            <div className="lg:w-1/3">
-              <div className="sticky top-32">
-                <motion.h2 
-                  initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
-                  className="text-4xl md:text-5xl font-bold tracking-tight uppercase"
-                >
-                  {t.processTitle}
-                </motion.h2>
-              </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24">
+            <div className="lg:col-span-5">
+              <motion.h2
+                initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+                className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight uppercase"
+              >
+                {t.expTitle}
+              </motion.h2>
             </div>
-
-            {/* Scrollable Steps */}
-            <div className="lg:w-2/3">
-              <div className="space-y-16 md:space-y-24">
-                {t.process.map((step, i) => (
-                  <motion.div 
-                    key={i}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.6 }}
-                    className="flex flex-col md:flex-row gap-6 md:gap-12 group"
-                  >
-                    <div className="text-4xl md:text-5xl font-light text-neutral-700 font-mono group-hover:text-white transition-colors duration-500 shrink-0">
-                      {step.num}
-                    </div>
-                    <div className="pt-2 md:pt-4">
-                      <h3 className="text-2xl md:text-3xl font-bold mb-4">{step.title}</h3>
-                      <p className="text-lg text-neutral-400 leading-relaxed font-light">{step.desc}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-
+            <motion.div
+              className="lg:col-span-7"
+              initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}
+            >
+              <p className="text-lg md:text-xl text-neutral-300 font-light leading-relaxed">
+                {t.expContent}
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>
