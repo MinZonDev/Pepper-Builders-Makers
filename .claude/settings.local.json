@@ -20,7 +20,9 @@
       "PowerShell(Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/8916a30a-06cd-4ded-9bc0-6ec139c2a2d8\" -OutFile \"$env:TEMP\\\\vi_section.png\"; Invoke-WebRequest -Uri \"https://www.figma.com/api/mcp/asset/257ce6b7-d83e-4ff3-b285-976d1241243a\" -OutFile \"$env:TEMP\\\\en_section.png\"; echo \"Done\")",
       "Bash(python -c ' *)",
       "Bash(python -c \"import sys; data=sys.stdin.buffer.read\\(\\); print\\(data.decode\\('utf-8', errors='replace'\\)\\)\")",
-      "Bash(npx tsc *)"
+      "Bash(npx tsc *)",
+      "mcp__plugin_figma_figma__generate_figma_design",
+      "PowerShell(netstat *)"
     ]
   }
 }

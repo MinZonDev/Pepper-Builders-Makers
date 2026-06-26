@@ -65,7 +65,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="vi" className={`${inter.variable} ${ibmPlexMono.variable}`}>
-      <body className="font-sans antialiased">
+<body className="font-sans antialiased">
         <LanguageProvider>
           <div className="flex min-h-screen flex-col bg-white text-neutral-900 font-sans">
             <Header />
